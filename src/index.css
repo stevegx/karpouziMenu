@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-watermelon-50: #fff1f1;
+  --color-watermelon-100: #ffe0e0;
+  --color-watermelon-200: #ffc5c5;
+  --color-watermelon-300: #ff9e9e;
+  --color-watermelon-400: #ff6b6b;
+  --color-watermelon-500: #ff4d4d;
+  --color-watermelon-600: #e63939;
+  --color-watermelon-700: #c92f2f;
+
+  --color-rind-50: #f2f7f2;
+  --color-rind-100: #dcebdd;
+  --color-rind-200: #b8d7ba;
+  --color-rind-300: #8ec090;
+  --color-rind-400: #5fa965;
+  --color-rind-500: #3f8f47;
+  --color-rind-600: #2f7036;
+
+  --color-sand-50: #fffaf3;
+  --color-sand-100: #fff4e6;
+  --color-sand-200: #fce7c8;
+
+  --color-seed: #2b2b2b;
+
+  /* Fonts */
+  --font-title: "Fredoka", cursive;
+  --font-body: "Inter", sans-serif;
+}
+
+/* Εφαρμογή των fonts στα tags */
+h1,
+h2,
+h3 {
+  font-family: var(--font-title) !important;
+}
+
+body {
+  font-family: var(--font-body);
+}
