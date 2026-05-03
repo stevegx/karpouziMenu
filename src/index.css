@@ -29,7 +29,15 @@
   --font-title: "Fredoka", cursive;
   --font-body: "Inter", sans-serif;
 }
-
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
 /* Εφαρμογή των fonts στα tags */
 h1,
 h2,

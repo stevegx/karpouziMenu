@@ -17,10 +17,10 @@ export default function HeroSection({ lang, setLang, languages }: HeroProps) {
         strokeWidth={3}
         absoluteStrokeWidth
         color="white"
-        className="absolute top-10 left-0 md:left-10 z-20"
+        className="absolute top-2 left-0 md:left-10 z-20 rotate-110 p-2 md:p-0"
       />
       <h1 className="text-white text-7xl font-display drop-shadow-lg mb-2 z-20">
-        Καρπούζι
+        To Καρπούζι
       </h1>
       <div className="flex justify-center items-center gap-2">
         <p className="text-sand-50 font-body italic text-lg opacity-90 tracking-wide z-20">

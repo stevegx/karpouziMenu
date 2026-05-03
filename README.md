@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -71,3 +72,7 @@ export default defineConfig([
   },
 ])
 ```
+=======
+# karpouziMenu
+This is a project for a canteen/beach bar named Karpouzi. Its an online Menu designed to be scanned via QR code.
+>>>>>>> 76e2f18c7e8ba4b98fbf3e0e0ee82040e5b5f226

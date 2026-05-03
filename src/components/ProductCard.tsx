@@ -1,27 +1,36 @@
-import { productCoffee } from "../data/data";
-export default function ProductCard() {
+import { type Product } from "../data/data";
+interface ProductCardProps {
+  lang: "el" | "en" | "tr";
+  product: Product;
+}
+export default function ProductCard({ lang, product }: ProductCardProps) {
   return (
-    <div className="flex items-center justify-around bg-white rounded-3xl w-full max-w-md h-32 gap-4 p-4 m-2 shadow-xl border border-sand-100">
-      <div className="w-20 h-20 shrink-0 flex items-center justify-center">
-        <img
-          src={productCoffee[0].img}
-          alt="product"
-          className="max-h-full max-w-full object-contain rounded-lg"
-        />
+    <div className="p-4 border-b border-sand-50 last:border-0 bg-white">
+      <div className="flex justify-between items-start mb-1">
+        <h4 className="font-bold text-seed uppercase text-sm">
+          {product.title[lang]}
+        </h4>
+        <span className="font-bold text-seed text-sm">{product.price}€</span>
       </div>
-      <div className="flex-1 min-w-0 flex flex-col justify-center">
-        <h2 className="font-title font-bold text-lg text-seed truncate uppercase tracking-tight">
-          {productCoffee[0].tittle["el"]}
-        </h2>
-        <p className="text-xs font-body italic text-seed/60 leading-tight mt-1 line-clamp-2">
-          {productCoffee[0].description["el"]}
+
+      {product.flavors && product.flavors[lang] && (
+        <div className="flex flex-wrap gap-1.5 mt-2">
+          {product.flavors[lang].map((flavor: string, i: number) => (
+            <span
+              key={i}
+              className="text-[10px] bg-rind-50/20 text-seed px-2 py-0.5 rounded-full border border-rind-400"
+            >
+              {flavor}
+            </span>
+          ))}
+        </div>
+      )}
+
+      {!product.flavors && product.description?.[lang] && (
+        <p className="text-xs italic text-seed/50">
+          {product.description[lang]}
         </p>
-      </div>
-      <div className="shrink-0">
-        <span className="text-xl font-title font-bold text-watermelon-500 whitespace-nowrap ml-2">
-          {productCoffee[0].price}€
-        </span>
-      </div>
+      )}
     </div>
   );
 }
