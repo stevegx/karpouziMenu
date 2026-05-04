@@ -5,7 +5,7 @@ import ProductList from "./components/ProductList";
 import CategoryBar from "./components/CategoryBar";
 import Footer from "./components/Footer";
 
-// Προσοχή στα imports: φέρε και το αρχικό categories array
+// Τα imports των δεδομένων σας
 import {
   languages,
   categories,
@@ -62,6 +62,7 @@ export default function App() {
         ];
       }
 
+      // Ταξινομούμε πάντα με βάση το αρχικό array categories από το data.ts
       const newSorted = [...categories].sort((a, b) => {
         return order.indexOf(a.id) - order.indexOf(b.id);
       });
@@ -69,16 +70,20 @@ export default function App() {
       setSortedCategories(newSorted);
     };
 
+    // Αρχική κλήση
     updateSortOrder();
+
+    // Ενημέρωση κάθε 15 λεπτά
     const interval = setInterval(updateSortOrder, 15 * 60 * 1000);
 
-    // 2. Intersection Observers
+    // 2. Intersection Observers για το Sticky Bar
     const headerObserver = new IntersectionObserver(
       ([entry]) => setShowBar(!entry.isIntersecting),
       { threshold: 0 },
     );
     if (topBoundaryRef.current) headerObserver.observe(topBoundaryRef.current);
 
+    // Observer για το ποιο section είναι ενεργό στο scroll
     const sectionObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -96,7 +101,8 @@ export default function App() {
       headerObserver.disconnect();
       sectionObserver.disconnect();
     };
-  }, [sortedCategories]);
+    // ΔΙΟΡΘΩΣΗ: Το array παραμένει κενό για να μην έχουμε infinite loop
+  }, []);
 
   const onCategoryClick = (id: string) => {
     const element = document.getElementById(id);
@@ -132,7 +138,6 @@ export default function App() {
               ? "OUR CATEGORIES"
               : "KATEGORİLERİMİZ"}
         </h1>
-        {/* Περνάμε το sortedCategories στο CategoryList */}
         <CategoryList
           lang={lang}
           categories={sortedCategories}

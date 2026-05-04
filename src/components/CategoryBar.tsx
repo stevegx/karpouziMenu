@@ -1,5 +1,4 @@
 import { useRef, useState } from "react";
-import { categories } from "../data/data";
 import CategoryBarCard from "./CategoryBarCard";
 import { type Category } from "../data/data";
 export interface CategoryBarProps {
@@ -12,6 +11,7 @@ export interface CategoryBarProps {
 export default function CategoryBar({
   lang,
   onCategoryClick,
+  categories,
   activeId,
 }: CategoryBarProps) {
   const scrollRef = useRef<HTMLDivElement>(null);

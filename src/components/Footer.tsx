@@ -33,7 +33,7 @@ export default function Footer({ lang }: footerProps) {
         rel="noopener noreferrer"
         className=" bg-watermelon-500 text-white p-3 rounded-full shadow-2xl flex items-center gap-2 hover:bg-watermelon-600"
       >
-        <span className="text-xs font-bold pl-1">RATE US</span>
+        <span className="text-sm font-bold pl-1">RATE US</span>
         <div className="bg-white p-1 rounded-full text-watermelon-500">
           <StarIcon size={16} fill="currentColor" />{" "}
           {/* Αν χρησιμοποιείς Lucide icons */}
@@ -44,7 +44,7 @@ export default function Footer({ lang }: footerProps) {
           {lang === "el" ? "To Καρπούζι" : "Karpouzi"}
         </h2>
 
-        <p className="font-body text-xs text-white/60 italic">
+        <p className="font-body text-sm text-white/60 italic">
           {lang === "el"
             ? "Η καντίνα μας, το στέκι σας! ❤️"
             : lang === "en"
@@ -52,7 +52,7 @@ export default function Footer({ lang }: footerProps) {
               : "Kantinimiz, mekanınız! ❤️"}
         </p>
 
-        <div className="border-t border-white/10 pt-4 text-[10px] uppercase tracking-widest text-white/40">
+        <div className="border-t border-white/10 pt-4 text-[12px] uppercase tracking-widest text-white/40">
           &copy; 2026 Karpouzi Cantina - All Rights Reserved <br />
           Created by Stavros Vetsikas
         </div>

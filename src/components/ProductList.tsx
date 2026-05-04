@@ -20,7 +20,7 @@ export default function ProductList({
   productList,
   categoryTitle,
 }: ProductListProps) {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
   return (
@@ -33,7 +33,7 @@ export default function ProductList({
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex justify-between items-center p-6 bg-white active:bg-sand-50"
       >
-        <span className="font-title text-2xl text-watermelon-500 uppercase text-left">
+        <span className="font-title text-2xl font-semibold text-watermelon-500 uppercase text-left">
           {categoryTitle[lang]}
         </span>
 
@@ -62,7 +62,7 @@ export default function ProductList({
             <div key={idx} className="w-full">
               {/* Ο τίτλος της υποενότητας (π.χ. ΚΡΥΑ ΡΟΦΗΜΑΤΑ) */}
               <div className="bg-sand-100/50 py-2 px-6 my-2">
-                <h3 className="text-xs font-bold text-seed/50 uppercase tracking-[0.2em]">
+                <h3 className="text-sm font-bold text-seed/50 uppercase tracking-[0.2em]">
                   {sub.subTitle[lang]}
                 </h3>
               </div>

@@ -23,7 +23,7 @@ export default function HeroSection({ lang, setLang, languages }: HeroProps) {
         To Καρπούζι
       </h1>
       <div className="flex justify-center items-center gap-2">
-        <p className="text-sand-50 font-body italic text-lg opacity-90 tracking-wide z-20">
+        <p className="text-white font-body italic text-lg opacity-90 tracking-wide z-20">
           η καντίνα μας, το στέκη σας!{" "}
         </p>
         <Heart
@@ -50,8 +50,8 @@ export default function HeroSection({ lang, setLang, languages }: HeroProps) {
             className={`w-14 h-14 rounded-full font-display text-lg transition-all border-2 flex items-center justify-center shadow-md
               ${
                 lang === l.code
-                  ? "bg-sand-200 text-watermelon-700 border-white scale-110 shadow-xl"
-                  : "bg-white/10 text-white border-white/30 hover:bg-white/20"
+                  ? "bg-sand-50 text-watermelon-600 font-bold border-white scale-110 shadow-xl"
+                  : "bg-white/10 text-white font-bold border-white/30 hover:bg-white/20"
               }`}
           >
             {l.label}
