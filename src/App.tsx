@@ -4,7 +4,6 @@ import CategoryList from "./components/CategoryList";
 import ProductList from "./components/ProductList";
 import CategoryBar from "./components/CategoryBar";
 import Footer from "./components/Footer";
-import { promos } from "./data/data";
 import {
   languages,
   categories,
