@@ -1,6 +1,6 @@
 import { Icon } from "lucide-react";
 import { watermelon } from "@lucide/lab";
-import { Heart } from "lucide-react";
+
 interface HeroProps {
   lang: string;
   setLang: (lang: "el" | "en" | "tr") => void;
@@ -9,54 +9,69 @@ interface HeroProps {
 
 export default function HeroSection({ lang, setLang, languages }: HeroProps) {
   return (
-    <header className="bg-watermelon-600 pt-16 pb-20 px-6 text-center rounded-b-[3.5rem] shadow-2xl relative overflow-hidden">
-      <div className="absolute -top-10 -right-10 opacity-10 w-40 h-40 bg-white rounded-full pointer-events-none" />
+    <header className="relative overflow-hidden text-center pt-14 pb-20 px-6 rounded-b-[2.5rem] bg-linear-[160deg,#c92e2e_0%,#e63939_45%,#c0392b_100%]">
+      {/* Background Blobs */}
+      <div className="absolute pointer-events-none -top-12 -right-12 w-48 h-48 bg-white/8 rounded-full" />
+      <div className="absolute pointer-events-none -bottom-16 -left-16 w-64 h-64 bg-white/5 rounded-full" />
+
+      {/* Watermelon icons */}
       <Icon
         iconNode={watermelon}
-        size={100}
-        strokeWidth={3}
+        size={90}
+        strokeWidth={2.5}
         absoluteStrokeWidth
-        color="white"
-        className="absolute top-2 left-0 md:left-10 z-20 rotate-110 p-2 md:p-0"
+        color="rgba(255,255,255,0.9)"
+        className="absolute z-20 top-2 left-2 rotate-120"
+        aria-hidden="true"
       />
-      <h1 className="text-white text-7xl font-display drop-shadow-lg mb-2 z-20">
-        To Καρπούζι
-      </h1>
-      <div className="flex justify-center items-center gap-2">
-        <p className="text-white font-body italic text-lg opacity-90 tracking-wide z-20">
-          η καντίνα μας, το στέκη σας!{" "}
+      <Icon
+        iconNode={watermelon}
+        size={80}
+        strokeWidth={2.5}
+        absoluteStrokeWidth
+        color="rgba(255,255,255,0.7)"
+        className="absolute z-20 bottom-6 right-3"
+        aria-hidden="true"
+      />
+
+      {/* Logo & tagline */}
+      <div className="relative z-20">
+        <h1 className="text-white drop-shadow-lg ml-5 font-title leading-[1.1] mb-2 text-[clamp(3rem,15vw,5rem)]">
+          Το Καρπούζι
+        </h1>
+        <p className="font-body italic text-[1.1rem] text-white/92 tracking-wide mb-7">
+          {lang === "el"
+            ? "η καντίνα μας, το στέκι σας!"
+            : lang === "en"
+              ? "our canteen, your hangout spot!"
+              : "kantinimiz, mekanınız!"}
         </p>
-        <Heart
-          size={50}
-          strokeWidth={2}
-          absoluteStrokeWidth
-          color="white"
-          className="rotate-20 p-1"
-        />
-      </div>
-      <Icon
-        iconNode={watermelon}
-        size={100}
-        strokeWidth={3}
-        absoluteStrokeWidth
-        color="white"
-        className="absolute bottom-10 right-0 md:right-10 z-20"
-      />
-      <div className="flex justify-center gap-4 mt-10 relative z-20">
-        {languages.map((l) => (
-          <button
-            key={l.code}
-            onClick={() => setLang(l.code as "el" | "en" | "tr")}
-            className={`w-14 h-14 rounded-full font-display text-lg transition-all border-2 flex items-center justify-center shadow-md
-              ${
-                lang === l.code
-                  ? "bg-sand-50 text-watermelon-600 font-bold border-white scale-110 shadow-xl"
-                  : "bg-white/10 text-white font-bold border-white/30 hover:bg-white/20"
-              }`}
-          >
-            {l.label}
-          </button>
-        ))}
+
+        {/* Language buttons */}
+        <div
+          role="group"
+          aria-label={lang === "el" ? "Επιλογή γλώσσας" : "Language selection"}
+          className="flex justify-center gap-3"
+        >
+          {languages.map((l) => (
+            <button
+              key={l.code}
+              onClick={() => setLang(l.code as "el" | "en" | "tr")}
+              aria-label={`${l.label} - ${l.code === "el" ? "Ελληνικά" : l.code === "en" ? "English" : "Türkçe"}`}
+              aria-pressed={lang === l.code}
+              className={`
+                w-13 h-13 rounded-full font-title text-base cursor-pointer transition-all duration-200
+                ${
+                  lang === l.code
+                    ? "bg-white text-watermelon-700 border-[2.5px] border-white font-bold scale-110 shadow-[0_4px_16px_rgba(0,0,0,0.2)]"
+                    : "bg-white/12 text-white border-2 border-white/40 font-semibold scale-100"
+                }
+              `}
+            >
+              {l.label}
+            </button>
+          ))}
+        </div>
       </div>
     </header>
   );

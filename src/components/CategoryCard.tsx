@@ -1,27 +1,46 @@
-import { type LucideIcon } from "lucide-react";
+import { emojiMap } from "../data/data";
 
 interface CategoryCardProps {
-  icon: LucideIcon;
   label: string;
   onClick: () => void;
+  emoji?: string;
 }
 
-export default function CategoryCard({
-  icon: Icon,
-  label,
-  onClick,
-}: CategoryCardProps) {
+export default function CategoryCard({ label, onClick }: CategoryCardProps) {
+  const emoji = emojiMap[label] || "🍽️";
+
   return (
-    <div
+    <button
       onClick={onClick}
-      className="flex flex-col items-center justify-center p-4 bg-rind-100 rounded-2xl shadow-sm hover:shadow-md transition-all cursor-pointer border-2 border-transparent hover:border-watermelon-200 w-28"
+      aria-label={`Πήγαινε στην κατηγορία ${label}`}
+      className="
+        flex flex-col items-center justify-center 
+        p-4 bg-white rounded-[1.25rem] 
+        border-2 border-sand-200 w-full min-h-22
+        cursor-pointer transition-all duration-200 
+        shadow-md
+        active:scale-[0.96] 
+        outline-none
+        hover:shadow-xl
+      "
     >
-      <div className="bg-rind-300 p-3 rounded-full mb-2 text-white shadow-inner">
-        <Icon size={32} strokeWidth={2.5} />
-      </div>
-      <h2 className="font-display text-sm text-seed font-semibold text-center leading-tight">
+      <span
+        className="text-2xl leading-none mb-[0.4rem]"
+        role="img"
+        aria-hidden="true"
+      >
+        {emoji}
+      </span>
+
+      <span
+        className="
+          font-title text-[0.78rem] font-semibold 
+          text-seed text-center leading-[1.2] 
+          uppercase tracking-[0.02em]
+        "
+      >
         {label}
-      </h2>
-    </div>
+      </span>
+    </button>
   );
 }

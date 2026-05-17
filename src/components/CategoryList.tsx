@@ -1,5 +1,6 @@
 import CategoryCard from "./CategoryCard";
 import { type Category } from "../data/data";
+
 export interface CategoryListProps {
   lang: "el" | "en" | "tr";
   onCategoryClick: (id: string) => void;
@@ -12,15 +13,32 @@ export default function CategoryList({
   categories,
 }: CategoryListProps) {
   return (
-    <div className="grid grid-cols-3 gap-4 p-6 justify-items-center md:flex md:flex-wrap md:justify-center">
-      {categories.map((category) => (
-        <CategoryCard
-          key={category.id}
-          icon={category.icon}
-          label={category.label[lang]}
-          onClick={() => onCategoryClick(category.id)}
-        />
-      ))}
-    </div>
+    <section
+      aria-label={
+        lang === "el"
+          ? "Κατηγορίες"
+          : lang === "en"
+            ? "Categories"
+            : "Kategoriler"
+      }
+    >
+      <h2 className="text-center font-title text-[1.6rem] font-semibold text-watermelon-700 mt-7 mb-1 tracking-tight uppercase">
+        {lang === "el"
+          ? "ΟΙ ΚΑΤΗΓΟΡΙΕΣ ΜΑΣ"
+          : lang === "en"
+            ? "OUR CATEGORIES"
+            : "KATEGORİLERİMİZ"}
+      </h2>
+
+      <div className="grid grid-cols-3 gap-3 px-4 pb-4">
+        {categories.map((category) => (
+          <CategoryCard
+            key={category.id}
+            label={category.label[lang]}
+            onClick={() => onCategoryClick(category.id)}
+          />
+        ))}
+      </div>
+    </section>
   );
 }

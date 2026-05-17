@@ -4,7 +4,7 @@ interface CategoryCardProps {
   isActive: boolean;
 }
 
-export default function CategoryCard({
+export default function CategoryBarCard({
   label,
   onClick,
   isActive,
@@ -12,18 +12,20 @@ export default function CategoryCard({
   return (
     <button
       onClick={onClick}
+      aria-pressed={isActive}
       className={`
-        shrink-0 px-6 py-2 rounded-full transition-all duration-300 border-2
+        shrink-0 py-[0.4rem] px-4 rounded-full border-2
+        font-title text-[0.82rem] font-bold tracking-[0.04em] uppercase whitespace-nowrap
+        cursor-pointer transition-all duration-200 min-h-9 min-w-16 outline-none
         ${
           isActive
-            ? "bg-watermelon-400 border-watermelon-500 text-white shadow-lg scale-105"
-            : "bg-white border-sand-100 text-seed hover:border-watermelon-200 shadow-sm"
+            ? "bg-white text-watermelon-700 border-white scale-105 shadow-[0_2px_12px_rgba(0,0,0,0.2)]"
+            : "bg-white/15 text-white border-white/40 scale-100 shadow-none"
         }
+        active:scale-95
       `}
     >
-      <span className="text-xs font-bold uppercase tracking-wider whitespace-nowrap">
-        {label}
-      </span>
+      {label}
     </button>
   );
 }

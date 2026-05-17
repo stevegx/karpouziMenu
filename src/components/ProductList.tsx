@@ -14,6 +14,15 @@ interface ProductListProps {
   categoryTitle: { el: string; en: string; tr: string };
 }
 
+const catEmoji: Record<string, string> = {
+  coffee: "☕",
+  drinks: "🧃",
+  soft_drinks: "🥤",
+  alcohol: "🍺",
+  cocktails: "🍹",
+  food: "🍔",
+};
+
 export default function ProductList({
   id,
   lang,
@@ -23,22 +32,36 @@ export default function ProductList({
   const [isOpen, setIsOpen] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
+  const emoji = catEmoji[id] || "🍽️";
+
   return (
     <div
       id={id}
       ref={sectionRef}
-      className="scroll-mt-24 border-b border-sand-100"
+      className={`scroll-mt-20 border-b border-sand-200 transition-colors duration-300 ${
+        isOpen ? "bg-sand-50" : "bg-white"
+      }`}
     >
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex justify-between items-center p-6 bg-white active:bg-sand-50"
+        aria-expanded={isOpen}
+        aria-controls={`${id}-content`}
+        className="flex w-full cursor-pointer items-center justify-between px-5 py-4 transition-all active:bg-watermelon-50/50"
       >
-        <span className="font-title text-2xl font-semibold text-watermelon-500 uppercase text-left">
-          {categoryTitle[lang]}
-        </span>
+        <div className="flex items-center gap-3">
+          <span className="text-2xl leading-none" role="img" aria-hidden="true">
+            {emoji}
+          </span>
+          <span className="font-title text-xl font-semibold tracking-tight text-watermelon-700 uppercase">
+            {categoryTitle[lang]}
+          </span>
+        </div>
 
         <span
-          className={`text-watermelon-400 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+          className={`text-watermelon-700 transition-transform duration-300 shrink-0 ${
+            isOpen ? "rotate-180" : "rotate-0"
+          }`}
+          aria-hidden="true"
         >
           <svg
             className="w-6 h-6"
@@ -49,27 +72,41 @@ export default function ProductList({
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWidth={3}
+              strokeWidth={2.5}
               d="M19 9l-7 7-7-7"
             />
           </svg>
         </span>
       </button>
 
+      {/* Expanded content */}
       {isOpen && (
-        <div className="bg-sand-50/30 pb-8 flex flex-col animate-in fade-in slide-in-from-top-1 duration-200">
+        <div
+          id={`${id}-content`}
+          role="region"
+          aria-label={categoryTitle[lang]}
+          className="pb-6 animate-in fade-in slide-in-from-top-1 duration-200"
+        >
           {productList.map((sub, idx) => (
-            <div key={idx} className="w-full">
-              {/* Ο τίτλος της υποενότητας (π.χ. ΚΡΥΑ ΡΟΦΗΜΑΤΑ) */}
-              <div className="bg-sand-100/50 py-2 px-6 my-2">
-                <h3 className="text-sm font-bold text-seed/50 uppercase tracking-[0.2em]">
+            <div key={idx}>
+              <div
+                className={`bg-sand-200/50 px-5 py-2 mb-4 border-l-4 border-watermelon-700 ${
+                  idx > 0 ? "mt-4" : "mt-2"
+                }`}
+              >
+                <h3 className="font-body text-sm font-bold tracking-[0.18em] text-seed/70 uppercase m-0">
                   {sub.subTitle[lang]}
                 </h3>
               </div>
 
-              <div className="flex flex-col gap-1 px-2">
+              <div className="px-3">
                 {sub.items.map((product, pIdx) => (
-                  <ProductCard key={pIdx} lang={lang} product={product} />
+                  <ProductCard
+                    key={pIdx}
+                    lang={lang}
+                    product={product}
+                    featured={product.featured}
+                  />
                 ))}
               </div>
             </div>

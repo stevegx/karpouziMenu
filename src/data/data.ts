@@ -7,13 +7,59 @@ import {
   Milk,
   type LucideIcon,
 } from "lucide-react";
-
+export const promos = {
+  el: [
+    "☀️ Καλοκαιρινή γρανίτα με 14 γεύσεις — δοκίμασε τη!",
+    "🍹 Σήμερα το Mojito είναι must — classic ή φράουλα;",
+    "☕ Freddo espresso ή cappuccino; Και τα δύο 2.90€!",
+    "🍔 Club sandwich με φρέσκες πατάτες — ό,τι πρέπει!",
+    "🍺 Τοπικές μπύρες Sedusa & Nissiopi — δοκίμασε κάτι διαφορετικό!",
+    "🌊 Γρανίτα Καρπούζι + Pina Colada = καλοκαίρι!",
+    "🥗 Χωριάτικη ή Ντάκος — φρέσκο & νόστιμο!",
+  ],
+  en: [
+    "☀️ Summer slushie with 14 flavors — give it a try!",
+    "🍹 Today's must: Mojito — classic or strawberry?",
+    "☕ Freddo espresso or cappuccino? Both just 2.90€!",
+    "🍔 Club sandwich with fresh fries — absolutely perfect!",
+    "🍺 Local brews Sedusa & Nissiopi — try something different!",
+    "🌊 Watermelon slushie + Pina Colada = summer vibes!",
+    "🥗 Greek salad or Dakos — fresh & delicious!",
+  ],
+  tr: [
+    "☀️ 14 çeşit granita — dene bakalım!",
+    "🍹 Bugün Mojito şart — klasik mi, çilekli mi?",
+    "☕ Freddo espresso veya cappuccino? İkisi de 2.90€!",
+    "🍔 Club sandviç + taze patates kızartması — mükemmel!",
+    "🍺 Yerel biralar Sedusa & Nissiopi — farklı bir şey dene!",
+    "🌊 Karpuz granitası + Pina Colada = yaz!",
+    "🥗 Yunan salatası ya da Dakos — taze ve lezzetli!",
+  ],
+};
 export const languages = [
   { code: "el", label: "GR" },
   { code: "en", label: "EN" },
   { code: "tr", label: "TR" },
 ] as const;
-
+export const emojiMap: Record<string, string> = {
+  ΚΑΦΕΔΕΣ: "☕",
+  COFFEES: "☕",
+  KAHVELER: "☕",
+  ΡΟΦΗΜΑΤΑ: "🧃",
+  BEVERAGES: "🧃",
+  İÇECEKLER: "🧃",
+  ΑΝΑΨΥΚΤΙΚΑ: "🥤",
+  "SOFT DRINKS": "🥤",
+  MEŞRUBAT: "🥤",
+  ΑΛΚΟΟΛ: "🍺",
+  ALCOHOL: "🍺",
+  ALKOL: "🍺",
+  COCKTAILS: "🍹",
+  KOKTEYLLER: "🍹",
+  ΦΑΓΗΤΑ: "🍔",
+  FOOD: "🍔",
+  YEMEKLER: "🍔",
+};
 export interface Category {
   id: string;
   label: { el: string; en: string; tr: string };
@@ -55,8 +101,8 @@ export const categories: Category[] = [
 export interface Product {
   title: { el: string; en: string; tr: string };
   description: { el: string; en: string; tr: string };
-  price: number | string;
-
+  price: number;
+  featured?: boolean;
   flavors: { el: []; en: []; tr: [] };
 }
 
@@ -82,6 +128,7 @@ export const Coffee = {
             tr: "Normal (2.90€) | Quad (4.00€). Decaf mevcuttur.",
           },
           price: 2.9,
+          featured: true,
         },
         {
           title: {
@@ -842,6 +889,7 @@ export const Cocktails = {
             tr: ["Klasik", "Çilekli"],
           },
           description: { el: "", en: "", tr: "" },
+          featured: true,
         },
         {
           title: { el: "MAI TAI", en: "MAI TAI", tr: "MAI TAI" },
@@ -851,6 +899,7 @@ export const Cocktails = {
             en: "Blend of rums, orgeat, lime, peach",
             tr: "Romatiz, orgeat, lime",
           },
+          featured: true,
         },
         {
           title: { el: "MARGARITA", en: "MARGARITA", tr: "MARGARITA" },
@@ -1123,6 +1172,7 @@ export const foodMenu = {
             en: "Beef patty, cheese, lettuce, tomato, ketchup, mustard, pickles, BBQ sauce. Served with fries.",
             tr: "Köfte, peynir, marul, domates, ketçap, hardal, turşu, Barbekü sos. Patates ile servis edilir.",
           },
+          featured: true,
         },
         {
           title: {
