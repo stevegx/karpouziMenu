@@ -67,7 +67,7 @@ export default function ProductCard({
       {hasDescription && (
         <p
           className={`font-body text-seed  ${
-            hasFlavors ? "text-sm mb-2" : "text-sm mt-2"
+            hasFlavors ? "text-sm mb-2" : "text-sm font-semibold mt-2"
           }`}
         >
           {product.description![lang]}

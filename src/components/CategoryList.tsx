@@ -21,8 +21,9 @@ export default function CategoryList({
             ? "Categories"
             : "Kategoriler"
       }
+      className="z-20 relative -top-20 rounded-4xl mx-5 bg-white shadow-lg"
     >
-      <h2 className="text-center font-title text-[1.6rem] font-semibold text-watermelon-700 mt-7 mb-1 tracking-tight uppercase">
+      <h2 className="text-center font-title text-xl py-3 font-semibold text-watermelon-700 mt-7 mb-1 tracking-tight uppercase">
         {lang === "el"
           ? "ΟΙ ΚΑΤΗΓΟΡΙΕΣ ΜΑΣ"
           : lang === "en"

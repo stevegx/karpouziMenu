@@ -66,3 +66,17 @@ body {
 html {
   scroll-behavior: smooth;
 }
+.bg-watermelon-seeds {
+  position: absolute; /* Απαραίτητο */
+  inset: 0; /* Καλύπτει όλο το header */
+  z-index: 5; /* Πίσω από το κείμενο, μπροστά από το χρώμα */
+  pointer-events: none;
+
+  /* Το μοτίβο */
+  background-image: radial-gradient(#2d1b1b 20%, transparent 25%);
+  background-size: 28px 60px;
+  background-position:
+    0 0,
+    15px 15px;
+  opacity: 0.16;
+}

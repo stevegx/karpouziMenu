@@ -38,21 +38,19 @@ export default function ProductList({
     <div
       id={id}
       ref={sectionRef}
-      className={`scroll-mt-20 border-b border-sand-200 transition-colors duration-300 ${
-        isOpen ? "bg-sand-50" : "bg-white"
-      }`}
+      className="*:scroll-mt-20 border-b border-sand-200 transition-colors duration-300"
     >
       <button
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
         aria-controls={`${id}-content`}
-        className="flex w-full cursor-pointer items-center justify-between px-5 py-4 transition-all active:bg-watermelon-50/50"
+        className="flex w-full cursor-pointer items-center justify-between px-5 py-4 transition-all active:bg-watermelon-50/50 shadow-sm "
       >
         <div className="flex items-center gap-3">
           <span className="text-2xl leading-none" role="img" aria-hidden="true">
             {emoji}
           </span>
-          <span className="font-title text-xl font-semibold tracking-tight text-watermelon-700 uppercase">
+          <span className="font-title text-xl font-bold tracking-tight text-watermelon-700 uppercase">
             {categoryTitle[lang]}
           </span>
         </div>
@@ -90,11 +88,11 @@ export default function ProductList({
           {productList.map((sub, idx) => (
             <div key={idx}>
               <div
-                className={`bg-sand-200/50 px-5 py-2 mb-4 border-l-4 border-watermelon-700 ${
+                className={`px-5 py-2 mb-4 border-l-4 border-watermelon-700 ${
                   idx > 0 ? "mt-4" : "mt-2"
                 }`}
               >
-                <h3 className="font-body text-sm font-bold tracking-[0.18em] text-seed/70 uppercase m-0">
+                <h3 className="font-body text-md font-bold tracking-[0.18em] text-seed/70 uppercase m-0">
                   {sub.subTitle[lang]}
                 </h3>
               </div>

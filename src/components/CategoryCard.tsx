@@ -16,7 +16,7 @@ export default function CategoryCard({ label, onClick }: CategoryCardProps) {
       className="
         flex flex-col items-center justify-center 
         p-4 bg-white rounded-[1.25rem] 
-        border-2 border-sand-200 w-full min-h-22
+        border border-sand-200 w-full min-h-22
         cursor-pointer transition-all duration-200 
         shadow-md
         active:scale-[0.96] 

@@ -4,6 +4,7 @@ import CategoryList from "./components/CategoryList";
 import ProductList from "./components/ProductList";
 import CategoryBar from "./components/CategoryBar";
 import Footer from "./components/Footer";
+
 import {
   languages,
   categories,
@@ -112,7 +113,7 @@ export default function App() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-sand-50/90">
+    <div className="flex flex-col min-h-screen">
       <div ref={topBoundaryRef}>
         <HeroSection lang={lang} setLang={setLang} languages={languages} />
 

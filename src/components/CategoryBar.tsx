@@ -40,7 +40,7 @@ export default function CategoryBar({
   return (
     <nav
       aria-label={lang === "el" ? "Πλοήγηση κατηγοριών" : "Category navigation"}
-      className="fixed top-0 left-0 right-0 z-50 bg-watermelon-700 border-b border-black/10 shadow-[0_2px_12px_rgba(0,0,0,0.2)]"
+      className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-black/10 shadow-[0_2px_12px_rgba(0,0,0,0.2)]"
     >
       <div
         ref={scrollRef}

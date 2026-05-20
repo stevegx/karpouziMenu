@@ -63,7 +63,13 @@ export default function Footer({ lang }: footerProps) {
               ? "Our canteen, your place to hangout! ❤️"
               : "Kantinimiz, mekanınız! ❤️"}
         </p>
-
+        <a
+          href="https://www.flaticon.com/free-icons/watermelon"
+          title="watermelon icons"
+          className="text-[0.8rem] text-white/60 uppercase mt-2"
+        >
+          Watermelon icons created by juicy_fish - Flaticon
+        </a>
         <div className="border-t border-white/8 pt-3 text-[0.8rem] uppercase tracking-widest text-white/60">
           &copy; 2026 Karpouzi Cantina — All Rights Reserved
           <br />
