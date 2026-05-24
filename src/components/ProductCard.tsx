@@ -30,6 +30,11 @@ export default function ProductCard({
 
   const hasDescription =
     product.description?.[lang] && product.description[lang] !== "";
+
+  const hasPhotoUrl =
+    product.photoUrl && product.photoUrl.trim() !== ""
+      ? product.photoUrl
+      : null;
   return (
     <div
       aria-label={product.title[lang]}
@@ -47,54 +52,48 @@ export default function ProductCard({
           ⭐ Δημοφιλές
         </div>
       )}
+      <div className="flex flex-row items-start gap-3 w-full">
+        {hasPhotoUrl && (
+          <img
+            src={hasPhotoUrl}
+            alt={product.title[lang]}
+            className="w-16 h-16 sm:w-20 sm:h-20 object-cover rounded-lg shrink-0"
+          />
+        )}
 
-      <div
-        className={`flex items-start justify-between gap-3 ${
-          hasFlavors || hasDescription ? "mb-2.5" : "mb-0"
-        }`}
-      >
-        <h4 className="font-title text-[1rem] font-semibold text-seed uppercase tracking-wider leading-tight flex-1 m-0">
-          {product.title[lang]}
-        </h4>
-        <span
-          className="font-title text-lg font-semibold text-watermelon-700 whitespace-nowrap shrink-0 bg-watermelon-50 px-2.5 py-0.5 rounded-lg"
-          aria-label={`Τιμή: ${priceDisplay}`}
-        >
-          {priceDisplay}
-        </span>
-      </div>
+        <div className="flex flex-col flex-1 min-w-0">
+          {" "}
+          <div className="flex items-start justify-between gap-2">
+            <h4 className="font-title text-base font-semibold text-seed uppercase tracking-wide leading-tight truncate">
+              {product.title[lang]}
+            </h4>
 
-      {hasDescription && (
-        <p
-          className={`font-body text-seed  ${
-            hasFlavors ? "text-sm mb-2" : "text-sm font-semibold mt-2"
-          }`}
-        >
-          {product.description![lang]}
-        </p>
-      )}
-
-      {/* Flavors */}
-      {hasFlavors && (
-        <div
-          className="flex flex-wrap gap-1.5"
-          aria-label={
-            lang === "el" ? "Διαθέσιμες γεύσεις" : "Available flavors"
-          }
-        >
-          {product.flavors[lang].map((flavor: string, i: number) => {
-            const col = pillClasses[i % pillClasses.length];
-            return (
-              <span
-                key={i}
-                className={`text-[0.7rem] mt-1 font-body font-bold px-2.5 py-1.5 rounded-full border leading-none ${col.bg} ${col.text} ${col.border}`}
-              >
-                {flavor}
-              </span>
-            );
-          })}
+            <span className="font-title text-sm font-bold text-watermelon-700 bg-watermelon-50 px-2 py-0.5 rounded-md whitespace-nowrap">
+              {priceDisplay}
+            </span>
+          </div>
+          {hasDescription && (
+            <p className="font-body text-sm text-seed/80 mt-1 line-clamp-2">
+              {product.description![lang]}
+            </p>
+          )}
+          {hasFlavors && (
+            <div className="flex flex-wrap gap-1 mt-2">
+              {product.flavors[lang].map((flavor: string, i: number) => {
+                const col = pillClasses[i % pillClasses.length];
+                return (
+                  <span
+                    key={i}
+                    className={`text-[0.65rem] font-body font-bold px-1.5 py-0.5 rounded-xl border leading-none ${col.bg} ${col.text} ${col.border}`}
+                  >
+                    {flavor}
+                  </span>
+                );
+              })}
+            </div>
+          )}
         </div>
-      )}
+      </div>
     </div>
   );
 }

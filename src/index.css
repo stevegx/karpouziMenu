@@ -53,6 +53,8 @@ body {
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 /* Focus ring for accessibility */
@@ -61,18 +63,29 @@ body {
   outline-offset: 2px;
   border-radius: 4px;
 }
+h1,
+h2,
+h3,
+h4 {
+  text-rendering: optimizeLegibility;
+  -webkit-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+}
+.break-words {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
 
 /* Smooth scroll */
 html {
   scroll-behavior: smooth;
 }
 .bg-watermelon-seeds {
-  position: absolute; /* Απαραίτητο */
-  inset: 0; /* Καλύπτει όλο το header */
-  z-index: 5; /* Πίσω από το κείμενο, μπροστά από το χρώμα */
+  position: absolute;
+  inset: 0;
+  z-index: 5;
   pointer-events: none;
 
-  /* Το μοτίβο */
   background-image: radial-gradient(#2d1b1b 20%, transparent 25%);
   background-size: 28px 60px;
   background-position:

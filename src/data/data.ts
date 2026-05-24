@@ -104,6 +104,7 @@ export interface Product {
   price: number;
   featured?: boolean;
   flavors: { el: []; en: []; tr: [] };
+  photoUrl?: string;
 }
 
 export const Coffee = {
@@ -129,7 +130,9 @@ export const Coffee = {
           },
           price: 2.9,
           featured: true,
+          photoUrl: "/assets/FREDDO ESPRESSO.jpg",
         },
+
         {
           title: {
             el: "FREDDO CAPPUCCINO",
@@ -142,6 +145,7 @@ export const Coffee = {
             tr: "Normal | Quad. Decaf.",
           },
           price: 2.9,
+          photoUrl: "/assets/FREDDO CAPPUCCINO.jpg",
         },
         {
           title: { el: "ΦΡΑΠΕ", en: "FRAPPE", tr: "FRAPPE" },
@@ -151,6 +155,7 @@ export const Coffee = {
             tr: "Decaf mevcuttur.",
           },
           price: 2.9,
+          photoUrl: "/assets/FRAPPE.jpg",
         },
         {
           title: { el: "LATTE ΚΡΥΟ", en: "ICED LATTE", tr: "BUZLU LATTE" },
@@ -160,6 +165,7 @@ export const Coffee = {
             tr: "Sütlü. Decaf mevcuttur.",
           },
           price: 2.9,
+          photoUrl: "/assets/ICED LATTE.jpg",
         },
         {
           title: { el: "FREDDUCCINO", en: "FREDDUCCINO", tr: "FREDDUCCINO" },
@@ -169,6 +175,7 @@ export const Coffee = {
             tr: "Buzlu harmanlanmış kahve.",
           },
           price: 4.0,
+          photoUrl: "/assets/FREDDUCCINO.jpg",
         },
       ],
     },
@@ -187,6 +194,7 @@ export const Coffee = {
             tr: "Tek | Çift. Decaf.",
           },
           price: 2.9,
+          photoUrl: "/assets/ESPRESSO.jpg",
         },
         {
           title: { el: "CAPPUCCINO", en: "CAPPUCCINO", tr: "CAPPUCCINO" },
@@ -196,6 +204,7 @@ export const Coffee = {
             tr: "Tek | Çift. Decaf.",
           },
           price: 2.9,
+          photoUrl: "/assets/cappuccino.jpg",
         },
         {
           title: {
@@ -209,6 +218,7 @@ export const Coffee = {
             tr: "Tek | Çift. Decaf.",
           },
           price: 2.0,
+          photoUrl: "/assets/GREEK COFFEE.jpg",
         },
         {
           title: { el: "NESCAFE", en: "NESCAFE", tr: "NESCAFE" },
@@ -218,6 +228,7 @@ export const Coffee = {
             tr: "Sıcak hazır kahve. Decaf.",
           },
           price: 2.9,
+          photoUrl: "/assets/NESCAFE.jpg",
         },
         {
           title: { el: "MACCHIATO", en: "MACCHIATO", tr: "MACCHIATO" },
@@ -227,6 +238,7 @@ export const Coffee = {
             tr: "Çift (3.90€). Decaf seçeneği mevcuttur.",
           },
           price: 3.9,
+          photoUrl: "/assets/MACCHIATO.jpg",
         },
         {
           title: { el: "LUNGO", en: "LUNGO", tr: "LUNGO" },
@@ -236,6 +248,7 @@ export const Coffee = {
             tr: "Çift (3.90€). Decaf seçeneği mevcuttur.",
           },
           price: 3.9,
+          photoUrl: "/assets/LUNGO.jpg",
         },
         {
           title: { el: "AMERICANO", en: "AMERICANO", tr: "AMERICANO" },
@@ -245,6 +258,7 @@ export const Coffee = {
             tr: "Espresso sıcak su. Decaf.",
           },
           price: 2.9,
+          photoUrl: "/assets/AMERICANO.jpg",
         },
         {
           title: { el: "ΓΑΛΛΙΚΟΣ", en: "FILTER COFFEE", tr: "FİLTRE KAHVE" },
@@ -254,6 +268,7 @@ export const Coffee = {
             tr: "Filtre kahve. Decaf.",
           },
           price: 2.9,
+          photoUrl: "/assets/FILTER COFFEE.jpg",
         },
       ],
     },
@@ -268,6 +283,7 @@ export const Coffee = {
             tr: "Sıcak veya Soğuk.",
           },
           price: 3.2,
+          photoUrl: "/assets/CHOCOLATE.jpg",
         },
         {
           title: { el: "MOCHACCINO", en: "MOCHACCINO", tr: "MOCHACCINO" },
@@ -277,6 +293,7 @@ export const Coffee = {
             tr: "Espresso ve çikolata. Sıcak/Soğuk.",
           },
           price: 3.5,
+          photoUrl: "/assets/MOCHACCINO.jpg",
         },
       ],
     },
@@ -305,6 +322,7 @@ export const Drinks = {
             en: ["Lemon", "Peach", "Green", "Raspberry", "Zero Sugar"],
             tr: ["Limon", "Şeftali", "Yeşil Çay", "Ahududu", "Şekersiz"],
           },
+          photoUrl: "/assets/LIPTON ICE TEA.jpg",
         },
       ],
     },
@@ -327,6 +345,7 @@ export const Drinks = {
             tr: "Sıcak aromatik çay.",
           },
           price: 2.9,
+          photoUrl: "/assets/TEA HOT.jpg",
         },
         {
           title: { el: "ΧΑΜΟΜΗΛΙ", en: "CHAMOMILE", tr: "PAPATYA ÇAYI" },
@@ -336,6 +355,7 @@ export const Drinks = {
             tr: "Doğal rahatlatıcı bitki çayı.",
           },
           price: 2.9,
+          photoUrl: "/assets/CHAMOMILE.jpg",
         },
       ],
     },
@@ -399,6 +419,7 @@ export const Drinks = {
               "Hindistan Cevizi",
             ],
           },
+          photoUrl: "/assets/SLUSHIES.jpg",
         },
       ],
     },
@@ -434,6 +455,7 @@ export const Drinks = {
               "Karışık Narenciye",
             ],
           },
+          photoUrl: "/assets/GIA GIA MAS.png",
         },
       ],
     },
@@ -466,6 +488,7 @@ export const Drinks = {
             ],
             tr: ["Çilek", "Karpuz", "Mango", "Ananas", "Böğürtlen", "Şeftali"],
           },
+          photoUrl: "/assets/ALOE VERA DRINK.jpg",
         },
       ],
     },
@@ -491,11 +514,13 @@ export const softDrinks = {
             tr: ["Classic", "Zero", "Light"],
           },
           description: { el: "", en: "", tr: "" },
+          photoUrl: "/assets/COCA COLA.jpg",
         },
         {
           title: { el: "PEPSI 330ml", en: "PEPSI 330ml", tr: "PEPSI 330ml" },
           price: 2.5,
           description: { el: "", en: "", tr: "" },
+          photoUrl: "/assets/PEPSI 330ml FIX.jpg",
         },
         {
           title: { el: "FANTA", en: "FANTA", tr: "FANTA" },
@@ -506,6 +531,7 @@ export const softDrinks = {
             tr: ["Portakallı", "Limonata", "Mavi"],
           },
           description: { el: "", en: "", tr: "" },
+          photoUrl: "/assets/FANTA FIX.jpg",
         },
         {
           title: { el: "ΗΒΗ", en: "IVI", tr: "IVI" },
@@ -516,6 +542,7 @@ export const softDrinks = {
             tr: ["Portakallı", "Limonata", "Mavi Portakallı"],
           },
           description: { el: "", en: "", tr: "" },
+          photoUrl: "/assets/IVI.jpg",
         },
         {
           title: { el: "SPRITE", en: "SPRITE", tr: "SPRITE" },
