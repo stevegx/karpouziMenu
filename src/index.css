@@ -29,8 +29,12 @@
   --color-seed-muted: #5a4a3a;
 
   /* Fonts */
-  --font-title: "Fredoka", cursive;
-  --font-body: "Nunito", "Segoe UI", sans-serif;
+  --font-title:
+    "PlaypenSans", cursive, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-body:
+    "Nunito", "Segoe UI", sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 @layer utilities {
