@@ -22,7 +22,9 @@ export default function App() {
   const [showBar, setShowBar] = useState(false);
   const [sortedCategories, setSortedCategories] = useState([...categories]);
   const topBoundaryRef = useRef<HTMLDivElement>(null);
-
+  const [openCategories, setOpenCategories] = useState<Record<string, boolean>>(
+    {},
+  );
   useEffect(() => {
     const updateSortOrder = () => {
       const hour = new Date().getHours();
@@ -93,6 +95,7 @@ export default function App() {
   }, []);
 
   const onCategoryClick = (id: string) => {
+    setOpenCategories((prev) => ({ ...prev, [id]: true }));
     const element = document.getElementById(id);
     if (element) {
       const offset = 80;
@@ -101,6 +104,9 @@ export default function App() {
       const elementPosition = elementRect - bodyRect;
       window.scrollTo({ top: elementPosition - offset, behavior: "smooth" });
     }
+  };
+  const handleToggleCategory = (id: string) => {
+    setOpenCategories((prev) => ({ ...prev, [id]: !prev[id] }));
   };
 
   const menuData: Record<string, any> = {
@@ -144,6 +150,8 @@ export default function App() {
                 lang={lang}
                 productList={data.subCategories}
                 categoryTitle={data.categoryTitle}
+                isOpen={!!openCategories[cat.id]}
+                onToggle={() => handleToggleCategory(cat.id)}
               />
             </section>
           );

@@ -28,7 +28,7 @@
   --color-seed: #1a1a1a;
   --color-seed-muted: #5a4a3a;
 
-  /* Fonts */
+  /* Fonts  FIX FONTS*/
   --font-title:
     "PlaypenSans", cursive, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Helvetica, Arial, sans-serif;

@@ -12,6 +12,8 @@ interface ProductListProps {
   lang: "el" | "en" | "tr";
   productList: SubCategory[];
   categoryTitle: { el: string; en: string; tr: string };
+  isOpen: boolean;
+  onToggle: () => void;
 }
 
 const catEmoji: Record<string, string> = {
@@ -28,8 +30,9 @@ export default function ProductList({
   lang,
   productList,
   categoryTitle,
+  isOpen,
+  onToggle,
 }: ProductListProps) {
-  const [isOpen, setIsOpen] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
   const emoji = catEmoji[id] || "🍽️";
@@ -41,7 +44,7 @@ export default function ProductList({
       className="*:scroll-mt-20 border-b border-sand-200 transition-colors duration-300"
     >
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={onToggle}
         aria-expanded={isOpen}
         aria-controls={`${id}-content`}
         className="flex w-full cursor-pointer items-center justify-between px-5 py-4 transition-all active:bg-watermelon-50/50 shadow-sm "
