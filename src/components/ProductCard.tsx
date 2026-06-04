@@ -20,7 +20,9 @@ export default function ProductCard({
   featured,
 }: ProductCardProps) {
   const priceDisplay =
-    typeof product.price === "number" && `${product.price.toFixed(2)}€`;
+    typeof product.price === "number"
+      ? `${product.price.toFixed(2)}€`
+      : product.price;
 
   const hasFlavors =
     product.flavors &&

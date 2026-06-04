@@ -126,11 +126,11 @@ export const Coffee = {
             tr: "FREDDO ESPRESSO",
           },
           description: {
-            el: "Κανονικό (2.90€) | Τετραπλό (4.00€). Διαθέσιμο Decaf.",
-            en: "Regular (2.90€) | Quad (4.00€). Decaf available.",
-            tr: "Normal (2.90€) | Quad (4.00€). Decaf mevcuttur.",
+            el: "Κανονικό (2.50€) | Τετραπλό (3.50€). Διαθέσιμο Decaf.",
+            en: "Regular (2.50€) | Quad (3.50€). Decaf available.",
+            tr: "Normal (2.50€) | Quad (3.50€). Decaf mevcuttur.",
           },
-          price: 2.9,
+          price: 2.5,
           featured: true,
           photoUrl: "/assets/FREDDO ESPRESSO.avif",
         },
@@ -141,11 +141,11 @@ export const Coffee = {
             tr: "FREDDO CAPPUCCINO",
           },
           description: {
-            el: "Κανονικό (2.90€) | Τετραπλό (4.00€). Decaf.",
+            el: "Κανονικό (3.00€) | Τετραπλό (4.00€). Decaf.",
             en: "Regular | Quad. Decaf.",
             tr: "Normal | Quad. Decaf.",
           },
-          price: 2.9,
+          price: 3.0,
           photoUrl: "/assets/FREDDO CAPPUCCINO.avif",
         },
         {
@@ -155,7 +155,7 @@ export const Coffee = {
             en: "Also available in Decaf.",
             tr: "Decaf mevcuttur.",
           },
-          price: 2.9,
+          price: 2,
           photoUrl: "/assets/FRAPPE.avif",
         },
         {
@@ -165,7 +165,7 @@ export const Coffee = {
             en: "With milk. Decaf available.",
             tr: "Sütlü. Decaf mevcuttur.",
           },
-          price: 2.9,
+          price: 3,
           photoUrl: "/assets/ICED LATTE.avif",
         },
         {
@@ -175,7 +175,7 @@ export const Coffee = {
             en: "Blended coffee drink.",
             tr: "Buzlu harmanlanmış kahve.",
           },
-          price: 4.0,
+          price: 3.5,
           photoUrl: "/assets/FREDDUCCINO.avif",
         },
       ],
@@ -190,21 +190,21 @@ export const Coffee = {
         {
           title: { el: "ESPRESSO", en: "ESPRESSO", tr: "ESPRESSO" },
           description: {
-            el: "Μονό (2.90€) | Διπλό (3.90€). Decaf.",
+            el: "Μονό (2.00€) | Διπλό (2.50€). Decaf.",
             en: "Single | Double. Decaf.",
             tr: "Tek | Çift. Decaf.",
           },
-          price: 2.9,
+          price: 2,
           photoUrl: "/assets/ESPRESSO.avif",
         },
         {
           title: { el: "CAPPUCCINO", en: "CAPPUCCINO", tr: "CAPPUCCINO" },
           description: {
-            el: "Μονό (2.90€) | Διπλό (3.90€). Decaf.",
+            el: "Μονό (2.20€) | Διπλό (3.00€). Decaf.",
             en: "Single | Double. Decaf.",
             tr: "Tek | Çift. Decaf.",
           },
-          price: 2.9,
+          price: 2.2,
           photoUrl: "/assets/cappuccino.avif",
         },
         {
@@ -214,11 +214,11 @@ export const Coffee = {
             tr: "YUNAN KAHVESI",
           },
           description: {
-            el: "Μονός (2.00€) | Διπλός (3.00€). Decaf.",
+            el: "Μονός (1.5€) | Διπλός (2.00€). Decaf.",
             en: "Single | Double. Decaf.",
             tr: "Tek | Çift. Decaf.",
           },
-          price: 2.0,
+          price: 1.5,
           photoUrl: "/assets/GREEK COFFEE.avif",
         },
         {
@@ -228,27 +228,27 @@ export const Coffee = {
             en: "Hot instant. Decaf available.",
             tr: "Sıcak hazır kahve. Decaf.",
           },
-          price: 2.9,
+          price: 2,
           photoUrl: "/assets/NESCAFE.avif",
         },
         {
           title: { el: "MACCHIATO", en: "MACCHIATO", tr: "MACCHIATO" },
           description: {
-            el: "Διπλό (3.90€). Διαθέσιμο και σε Decaf.",
-            en: "Double (3.90€). Also available in Decaf.",
-            tr: "Çift (3.90€). Decaf seçeneği mevcuttur.",
+            el: "Μονός (2.00€) | Διπλό (2.50€). Διαθέσιμο και σε Decaf.",
+            en: "Single (2.00€) | Double (2.50€). Also available in Decaf.",
+            tr: "Tek (2.00€) | Çift (2.50€). Decaf seçeneği mevcuttur.",
           },
-          price: 3.9,
+          price: 2,
           photoUrl: "/assets/MACCHIATO.avif",
         },
         {
           title: { el: "LUNGO", en: "LUNGO", tr: "LUNGO" },
           description: {
-            el: "Διπλό (3.90€). Διαθέσιμο και σε Decaf.",
-            en: "Double (3.90€). Also available in Decaf.",
-            tr: "Çift (3.90€). Decaf seçeneği mevcuttur.",
+            el: "Μονός (2.00€) | Διπλό (2.50€). Διαθέσιμο και σε Decaf.",
+            en: "Single (2.00€) | Double (2.50€). Also available in Decaf.",
+            tr: "Tek (2.00€) | Çift (2.50€). Decaf seçeneği mevcuttur.",
           },
-          price: 3.9,
+          price: 2,
           photoUrl: "/assets/LUNGO.avif",
         },
         {
@@ -258,7 +258,7 @@ export const Coffee = {
             en: "Espresso with hot water. Decaf.",
             tr: "Espresso sıcak su. Decaf.",
           },
-          price: 2.9,
+          price: 2.5,
           photoUrl: "/assets/AMERICANO.avif",
         },
         {
@@ -268,7 +268,7 @@ export const Coffee = {
             en: "Filter coffee. Decaf.",
             tr: "Filtre kahve. Decaf.",
           },
-          price: 2.9,
+          price: 2.5,
           photoUrl: "/assets/FILTER COFFEE.avif",
         },
       ],
@@ -283,7 +283,7 @@ export const Coffee = {
             en: "Hot or Iced.",
             tr: "Sıcak veya Soğuk.",
           },
-          price: 3.2,
+          price: 3.5,
           photoUrl: "/assets/CHOCOLATE.avif",
         },
         {
@@ -293,7 +293,7 @@ export const Coffee = {
             en: "Espresso and chocolate. Hot or Iced.",
             tr: "Espresso ve çikolata. Sıcak/Soğuk.",
           },
-          price: 3.5,
+          price: 4,
           photoUrl: "/assets/MOCHACCINO.avif",
         },
       ],
@@ -317,7 +317,7 @@ export const Drinks = {
             en: "LIPTON ICE TEA (330ml / 500ml)",
             tr: "LIPTON ICE TEA (330ml / 500ml)",
           },
-          price: "2.50 / 3.50",
+          price: "2.00€ / 3.00€",
           flavors: {
             el: ["Λεμόνι", "Ροδάκινο", "Green", "Raspberry", "Χωρίς Ζάχαρη"],
             en: ["Lemon", "Peach", "Green", "Raspberry", "Zero Sugar"],
@@ -345,7 +345,7 @@ export const Drinks = {
             en: "Hot aromatic tea.",
             tr: "Sıcak aromatik çay.",
           },
-          price: 2.9,
+          price: 2,
           photoUrl: "/assets/TEA HOT.avif",
         },
         {
@@ -355,7 +355,7 @@ export const Drinks = {
             en: "Natural relaxing herbal drink.",
             tr: "Doğal rahatlatıcı bitki çayı.",
           },
-          price: 2.9,
+          price: 1.5,
           photoUrl: "/assets/CHAMOMILE.avif",
         },
       ],
@@ -369,7 +369,7 @@ export const Drinks = {
             en: "SLUSHIE FLAVORS",
             tr: "AROMALI GRANİTA",
           },
-          price: 4.0,
+          price: 3.5,
           flavors: {
             el: [
               "Φράουλα",
@@ -469,7 +469,7 @@ export const Drinks = {
             en: "ALOE VERA DRINK",
             tr: "ALOE VERA DRINK",
           },
-          price: 3.5,
+          price: 2.5,
           flavors: {
             el: [
               "Φράουλα",
@@ -508,7 +508,7 @@ export const softDrinks = {
       items: [
         {
           title: { el: "COCA COLA", en: "COCA COLA", tr: "COCA COLA" },
-          price: 2.5,
+          price: 2,
           flavors: {
             el: ["Classic", "Zero", "Light"],
             en: ["Classic", "Zero", "Light"],
@@ -519,13 +519,13 @@ export const softDrinks = {
         },
         {
           title: { el: "PEPSI 330ml", en: "PEPSI 330ml", tr: "PEPSI 330ml" },
-          price: 2.5,
+          price: 2,
           description: { el: "", en: "", tr: "" },
           photoUrl: "/assets/PEPSI 330ml.avif",
         },
         {
           title: { el: "FANTA", en: "FANTA", tr: "FANTA" },
-          price: 2.5,
+          price: 2,
           flavors: {
             el: ["Πορτοκαλάδα", "Λεμονάδα", "Μπλε"],
             en: ["Orangeade", "Lemonade", "Blue"],
@@ -536,7 +536,7 @@ export const softDrinks = {
         },
         {
           title: { el: "ΗΒΗ", en: "IVI", tr: "IVI" },
-          price: 2.5,
+          price: 2,
           flavors: {
             el: ["Πορτοκαλάδα", "Λεμονάδα", "Μπλε Πορτοκαλάδα"],
             en: ["Orangeade", "Lemonade", "Blue Orangeade"],
@@ -547,13 +547,13 @@ export const softDrinks = {
         },
         {
           title: { el: "SPRITE", en: "SPRITE", tr: "SPRITE" },
-          price: 2.5,
+          price: 2,
           description: { el: "", en: "", tr: "" },
           photoUrl: "/assets/SPRITE.avif",
         },
         {
           title: { el: "7UP", en: "7UP", tr: "7UP" },
-          price: 2.5,
+          price: 2,
           description: { el: "", en: "", tr: "" },
           photoUrl: "/assets/7UP.avif",
         },
@@ -563,7 +563,7 @@ export const softDrinks = {
             en: "SCHWEPPES 330ml",
             tr: "SCHWEPPES 330ml",
           },
-          price: 2.8,
+          price: 2,
           flavors: {
             el: [
               "Pink Grapefruit",
@@ -624,7 +624,7 @@ export const softDrinks = {
             en: "JUICES (250ml)",
             tr: "MEYVE SULARI (250ml)",
           },
-          price: 2.2,
+          price: 1.5,
           flavors: {
             el: ["Αναμεικτος", "Πορτοκάλι", "Βύσσινο", "Ροδάκινο"],
             en: ["Mixed", "Orange", "Sour Cherry", "Peach"],
@@ -644,7 +644,7 @@ export const softDrinks = {
             en: "FUZE TEA 330ml",
             tr: "FUZE TEA 330ml",
           },
-          price: 2.8,
+          price: 2,
           flavors: {
             el: ["Λεμόνι & Λουίζα", "Ροδάκινο & Ιβίσκος"],
             en: ["Lemon & Verbena", "Peach & Hibiscus"],
@@ -664,7 +664,7 @@ export const softDrinks = {
             en: "NATURAL MINERAL WATER",
             tr: "DOĞAL MADEN SUYU",
           },
-          price: "0.50 / 1.50",
+          price: "0.50€ / 1.00€",
           description: {
             el: "500ml / 1.5lt",
             en: "500ml / 1.5lt",
@@ -674,9 +674,9 @@ export const softDrinks = {
         },
         {
           title: {
-            el: "ΑΝΘΡΑΚΟΥΧΟ ΝΕΡΟ",
-            en: "SPARKLING WATER",
-            tr: "MADEN SUYU",
+            el: "ΑΝΘΡΑΚΟΥΧΟ ΝΕΡΟ 330ml",
+            en: "SPARKLING WATER 330ml",
+            tr: "MADEN SUYU 330ml",
           },
           price: 2.5,
           description: { el: "", en: "", tr: "" },
@@ -706,7 +706,7 @@ export const Alcohol = {
             en: "LAGER & CLASSIC",
             tr: "LAGER & CLASSIC",
           },
-          price: 4.0,
+          price: 2.0,
           flavors: {
             el: [
               "Άλφα",
@@ -734,6 +734,7 @@ export const Alcohol = {
               "Vergina",
               "Amstel",
               "Heineken",
+              "Νήσος",
             ],
           },
           description: { el: "", en: "", tr: "" },
@@ -745,7 +746,7 @@ export const Alcohol = {
             en: "PILSNER & PREMIUM",
             tr: "PILSNER & PREMIUM",
           },
-          price: 4.5,
+          price: 2,
           flavors: {
             el: ["Mamos", "Kaiser", "Άλφα Αλάτι"],
             en: ["Mamos", "Kaiser", "Alfa Salt"],
@@ -760,9 +761,9 @@ export const Alcohol = {
             en: "SPECIAL & LOCAL BREWS",
             tr: "ÖZEL BİRALAR",
           },
-          price: 5.0,
+          price: 4.0,
           flavors: {
-            el: ["Sedusa", "Nissiopi", "Νήσος", "Fix Dark"],
+            el: ["Sedusa", "Nissiopi", "Fix Dark"],
             en: ["Sedusa", "Nissiopi", "Nisos", "Fix Dark"],
             tr: ["Sedusa", "Nissiopi", "Nisos", "Fix Dark"],
           },
@@ -775,13 +776,17 @@ export const Alcohol = {
             en: "ALCOHOL FREE / RADLER",
             tr: "ALKOLSÜZ / RADLER",
           },
-          price: 4.0,
+          price: 2.0,
           flavors: {
-            el: ["Άλφα Άνευ", "Fix Άνευ", "Radler", "Bundaberg"],
-            en: ["Alfa Free", "Fix Free", "Radler", "Bundaberg"],
-            tr: ["Alfa Free", "Fix Free", "Radler", "Bundaberg"],
+            el: ["Άλφα Άνευ", "Fix Άνευ", "Radler"],
+            en: ["Alfa Free", "Fix Free", "Radler"],
+            tr: ["Alfa Free", "Fix Free", "Radler"],
           },
           description: { el: "", en: "", tr: "" },
+        },
+        {
+          title: { el: "BUNDABERG", en: "BUNDABERG", tr: "BUNDABERG" },
+          price: 3.0,
         },
       ],
     },
@@ -794,7 +799,7 @@ export const Alcohol = {
       items: [
         {
           title: { el: "BREEZER", en: "BREEZER", tr: "BREEZER" },
-          price: 5.0,
+          price: 4.0,
           flavors: {
             el: ["Καρπούζι", "Λεμόνι", "Πορτοκάλι"],
             en: ["Watermelon", "Lemon", "Orange"],
@@ -808,7 +813,7 @@ export const Alcohol = {
             en: "MIXED SPIRITS",
             tr: "KARIŞIK İÇKİLER",
           },
-          price: 5.5,
+          price: 4.0,
           flavors: {
             el: ["Gordon's Space", "Smirnoff Ice"],
             en: ["Gordon's Space", "Smirnoff Ice"],
@@ -831,7 +836,7 @@ export const Alcohol = {
             en: "WINE (250ml / 500ml)",
             tr: "ŞARAP (250ml / 500ml)",
           },
-          price: "4.0 / 7.0",
+          price: "3.5€ / 6.0€",
           flavors: {
             el: ["Λευκό Ξηρό", "Ημιγλυκό Κόκκινο", "Κόκκινο Ξηρό", "Ροζέ"],
             en: ["Dry White", "Semi-sweet Red", "Dry Red", "Rosé"],
@@ -841,7 +846,7 @@ export const Alcohol = {
         },
         {
           title: { el: "ΡΕΤΣΙΝΑ", en: "RETSINA", tr: "RETSİNA" },
-          price: 4.5,
+          price: 6,
           flavors: {
             el: ["Μαλαματίνα", "Κουρτάκη"],
             en: ["Malamatina", "Kourtaki"],
@@ -860,15 +865,29 @@ export const Alcohol = {
       items: [
         {
           title: {
-            el: "ΟΥΖΟ / ΤΣΙΠΟΥΡΟ",
-            en: "OUZO / TSIPOURO",
-            tr: "UZO / ÇİPURO",
+            el: "ΟΥΖΟ",
+            en: "OUZO",
+            tr: "UZO",
           },
-          price: "5.0 / 8.0",
+          price: 3.0,
           flavors: {
-            el: ["Ούζο 50ml", "Ούζο 200ml", "Τσίπουρο 200ml"],
-            en: ["Ouzo 50ml", "Ouzo 200ml", "Tsipouro 200ml"],
-            tr: ["Uzo 50ml", "Uzo 200ml", "Çipuro 200ml"],
+            el: ["50ml", "200ml (6.0€)"],
+            en: ["50ml", "200ml (8.0€)"],
+            tr: ["50ml", "200ml (8.0€)"],
+          },
+          description: { el: "", en: "", tr: "" },
+        },
+        {
+          title: {
+            el: "ΤΣΙΠΟΥΡΟ",
+            en: "TSIPOURO",
+            tr: "ÇİPURO",
+          },
+          price: 8.0,
+          flavors: {
+            el: ["200ml"],
+            en: ["200ml"],
+            tr: ["200ml"],
           },
           description: { el: "", en: "", tr: "" },
         },
@@ -897,7 +916,7 @@ export const Alcohol = {
             en: "LIQUEURS & APERITIFS",
             tr: "LIKÖR VE APERATİF",
           },
-          price: 7.0,
+          price: 6.0,
           flavors: {
             el: ["Campari", "Aperol", "Baileys"],
             en: ["Campari", "Aperol", "Baileys"],
@@ -966,7 +985,7 @@ export const Cocktails = {
         },
         {
           title: { el: "PALOMA", en: "PALOMA", tr: "PALOMA" },
-          price: 9.0,
+          price: 8.5,
           description: {
             el: "Tequila, lime, pink grapefruit soda",
             en: "Tequila, lime, pink grapefruit soda",
@@ -985,7 +1004,7 @@ export const Cocktails = {
       items: [
         {
           title: { el: "NEGRONI", en: "NEGRONI", tr: "NEGRONI" },
-          price: 9.0,
+          price: 8.0,
           description: {
             el: "Gin, Campari, Sweet Vermouth",
             en: "Gin, Campari, Sweet Vermouth",
@@ -995,7 +1014,7 @@ export const Cocktails = {
         },
         {
           title: { el: "DAIQUIRI", en: "DAIQUIRI", tr: "DAIQUIRI" },
-          price: 8.5,
+          price: 8.0,
           description: {
             el: "Rum, lime, simple syrup",
             en: "Rum, lime, simple syrup",
@@ -1005,7 +1024,7 @@ export const Cocktails = {
         },
         {
           title: { el: "COSMOPOLITAN", en: "COSMOPOLITAN", tr: "COSMOPOLITAN" },
-          price: 8.5,
+          price: 8.0,
           description: {
             el: "Vodka, triple sec, cranberry, lime",
             en: "Vodka, triple sec, cranberry, lime",
@@ -1015,7 +1034,7 @@ export const Cocktails = {
         },
         {
           title: { el: "CUBA LIBRE", en: "CUBA LIBRE", tr: "CUBA LIBRE" },
-          price: 8.5,
+          price: 8.0,
           description: {
             el: "Rum, cola, lime",
             en: "Rum, cola, lime",
@@ -1048,7 +1067,7 @@ export const Cocktails = {
       items: [
         {
           title: { el: "CAIPIRINHA", en: "CAIPIRINHA", tr: "CAIPIRINHA" },
-          price: 8.5,
+          price: 8.0,
           description: {
             el: "Cachaça, lime, sugar",
             en: "Cachaça, lime, sugar",
@@ -1058,7 +1077,7 @@ export const Cocktails = {
         },
         {
           title: { el: "CAIPIROSCA", en: "CAIPIROSCA", tr: "CAIPIROSCA" },
-          price: 8.5,
+          price: 8.0,
           description: {
             el: "Vodka, lime, sugar",
             en: "Vodka, lime, sugar",
@@ -1068,7 +1087,7 @@ export const Cocktails = {
         },
         {
           title: { el: "BRAMBLE", en: "BRAMBLE", tr: "BRAMBLE" },
-          price: 9.0,
+          price: 8.5,
           description: {
             el: "Gin, lemon, blackberry liqueur",
             en: "Gin, lemon, blackberry liqueur",
@@ -1087,7 +1106,7 @@ export const Cocktails = {
       items: [
         {
           title: { el: "MANHATTAN", en: "MANHATTAN", tr: "MANHATTAN" },
-          price: 9.0,
+          price: 8.0,
           description: {
             el: "Whiskey, sweet vermouth, bitters",
             en: "Whiskey, sweet vermouth, bitters",
@@ -1101,7 +1120,7 @@ export const Cocktails = {
             en: "WHISKEY HIGHBALL",
             tr: "WHISKEY HIGHBALL",
           },
-          price: 9.0,
+          price: 8.0,
           description: {
             el: "Whiskey, soda water, lemon",
             en: "Whiskey, soda water, lemon",
@@ -1124,7 +1143,7 @@ export const Cocktails = {
             en: "APEROL SPRITZ",
             tr: "APEROL SPRITZ",
           },
-          price: 7.5,
+          price: 8.5,
           description: {
             el: "Aperol, prosecco, soda",
             en: "Aperol, prosecco, soda",
@@ -1138,7 +1157,7 @@ export const Cocktails = {
             en: "CAMPARI SPRITZ",
             tr: "CAMPARI SPRITZ",
           },
-          price: 7.5,
+          price: 8.5,
           description: {
             el: "Campari, prosecco, soda",
             en: "Campari, prosecco, soda",
@@ -1170,7 +1189,7 @@ export const foodMenu = {
             en: "TOAST OR SANDWICH",
             tr: "TOST VEYA SANDVİÇ",
           },
-          price: 4.5,
+          price: "2.00€ / 2.5€",
           flavors: {
             el: ["Ζαμπόν - Τυρί", "Γαλοπούλα - Τυρί"],
             en: ["Ham - Cheese", "Turkey - Cheese"],
@@ -1189,7 +1208,7 @@ export const foodMenu = {
             en: "GREEK VILLAGE SANDWICH",
             tr: "YUNAN SANDVİÇİ",
           },
-          price: 5.5,
+          price: 4,
           description: {
             el: "Φέτα, ντομάτα, αγγούρι, ελιές, ρίγανη, λάδι",
             en: "Feta cheese, tomato, cucumber, olives, oregano, olive oil",
@@ -1203,7 +1222,7 @@ export const foodMenu = {
             en: "CLUB SANDWICH",
             tr: "CLUB SANDVİÇ",
           },
-          price: 8.5,
+          price: 6,
           description: {
             el: "Τυρί, ζαμπόν, μπέικον, μαρούλι, ντομάτα, μαγιονέζα. Συνοδεύεται από φρέσκες πατάτες.",
             en: "Cheese, ham, bacon, lettuce, tomato, mayo. Served with fresh fries.",
@@ -1226,7 +1245,7 @@ export const foodMenu = {
             en: "CLASSIC BURGER",
             tr: "KLASİK BURGER",
           },
-          price: 9.0,
+          price: 6.5,
           description: {
             el: "Μπιφτέκι, τυρί, μαρούλι, ντομάτα, κέτσαπ, μουστάρδα, πικλες, BBQ sauce. Συνοδεύεται από πατάτες.",
             en: "Beef patty, cheese, lettuce, tomato, ketchup, mustard, pickles, BBQ sauce. Served with fries.",
@@ -1241,7 +1260,7 @@ export const foodMenu = {
             en: "CLASSIC HOT DOG",
             tr: "KLASİK HOT DOG",
           },
-          price: 4.5,
+          price: 3,
           description: {
             el: "Κέτσαπ, μουστάρδα",
             en: "Ketchup, mustard",
@@ -1255,7 +1274,7 @@ export const foodMenu = {
             en: "SPECIAL HOT DOG",
             tr: "ÖZEL HOT DOG",
           },
-          price: 6.0,
+          price: 4.5,
           description: {
             el: "Cheddar, BBQ sauce, πίκλες, κρεμμύδι",
             en: "Cheddar, BBQ sauce, pickles, onion",
@@ -1274,7 +1293,7 @@ export const foodMenu = {
             en: "CHICKEN NUGGETS PLATE",
             tr: "TAVUK NUGGET TABAĞI",
           },
-          price: 8.5,
+          price: 7.0,
           description: {
             el: "Κλασικές κοτομπουκιές με φρέσκες πατάτες",
             en: "Classic chicken nuggets with fresh fries",
@@ -1288,7 +1307,7 @@ export const foodMenu = {
             en: "CHICKEN NUGGETS PHILADELPHIA",
             tr: "PHILADELPHIA NUGGET",
           },
-          price: 9.5,
+          price: 7.5,
           description: {
             el: "Γεμιστές με Philadelphia, συνοδεύονται από φρέσκες πατάτες",
             en: "Filled with Philadelphia cheese, served with fresh fries",
@@ -1302,7 +1321,7 @@ export const foodMenu = {
             en: "FRENCH FRIES",
             tr: "PATATES KIZARTMASI",
           },
-          price: 4.0,
+          price: 3.5,
           description: {
             el: "Φρέσκες τηγανητές πατάτες",
             en: "Freshly cut fries",
@@ -1321,13 +1340,13 @@ export const foodMenu = {
       items: [
         {
           title: { el: "ΧΩΡΙΑΤΙΚΗ", en: "GREEK SALAD", tr: "YUNAN SALATASI" },
-          price: 7.5,
+          price: 6,
           description: { el: "", en: "", tr: "" },
           photoUrl: "/assets/GREEK SALAD.avif",
         },
         {
           title: { el: "ΝΤΑΚΟΣ", en: "DAKOS SALAD", tr: "DAKOS" },
-          price: 7.0,
+          price: 5,
           description: {
             el: "Κρητικό παξιμάδι, ντομάτα, φέτα, κάπαρη",
             en: "Cretan rusk, tomato, feta, capers",
@@ -1337,13 +1356,13 @@ export const foodMenu = {
         },
         {
           title: { el: "CHEF SALAD", en: "CHEF SALAD", tr: "ŞEFİN SALATASI" },
-          price: 8.0,
+          price: 6,
           description: { el: "", en: "", tr: "" },
           photoUrl: "/assets/CHEF SALAD.avif",
         },
         {
           title: { el: "ΤΖΑΤΖΙΚΙ", en: "TZATZIKI", tr: "CACIK" },
-          price: 4.5,
+          price: 3,
           description: { el: "Χειροποίητο", en: "Handmade", tr: "El yapımı" },
           photoUrl: "/assets/TZATZIKI.avif",
         },
@@ -1353,7 +1372,7 @@ export const foodMenu = {
             en: "FRUIT SALAD",
             tr: "MEYVE SALATASI",
           },
-          price: 6.0,
+          price: 4,
           description: {
             el: "Με φρούτα εποχής",
             en: "With seasonal fruits",
@@ -1382,7 +1401,7 @@ export const foodMenu = {
             en: "CHICKEN SKEWER",
             tr: "TAVUK ŞİŞ",
           },
-          price: 2.4,
+          price: 2.5,
           description: { el: "Τεμάχιο", en: "Per piece", tr: "Adet" },
         },
         {
