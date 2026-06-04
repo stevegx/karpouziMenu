@@ -1,4 +1,19 @@
 @import "tailwindcss";
+@font-face {
+  font-family: "PlaypenSans";
+  font-style: normal;
+  font-weight: 100 800; /* variable range */
+  font-display: swap;
+  src: url("/fonts/PlaypenSans-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 200 1000; /* variable range */
+  font-display: swap;
+  src: url("/fonts/Nunito-VariableFont_wght.ttf") format("truetype");
+}
 
 @theme {
   /* Colors */
@@ -28,13 +43,9 @@
   --color-seed: #1a1a1a;
   --color-seed-muted: #5a4a3a;
 
-  /* Fonts  FIX FONTS*/
   --font-title:
-    "PlaypenSans", cursive, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --font-body:
-    "Nunito", "Segoe UI", sans-serif, system-ui, -apple-system,
-    BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    "PlaypenSans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
 }
 
 @layer utilities {

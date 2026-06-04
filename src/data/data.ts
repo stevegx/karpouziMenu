@@ -132,7 +132,7 @@ export const Coffee = {
           },
           price: 2.9,
           featured: true,
-          photoUrl: "/assets/FREDDO ESPRESSO.jpg",
+          photoUrl: "/assets/FREDDO ESPRESSO.avif",
         },
         {
           title: {
@@ -146,7 +146,7 @@ export const Coffee = {
             tr: "Normal | Quad. Decaf.",
           },
           price: 2.9,
-          photoUrl: "/assets/FREDDO CAPPUCCINO.jpg",
+          photoUrl: "/assets/FREDDO CAPPUCCINO.avif",
         },
         {
           title: { el: "ΦΡΑΠΕ", en: "FRAPPE", tr: "FRAPPE" },
@@ -156,7 +156,7 @@ export const Coffee = {
             tr: "Decaf mevcuttur.",
           },
           price: 2.9,
-          photoUrl: "/assets/FRAPPE.jpg",
+          photoUrl: "/assets/FRAPPE.avif",
         },
         {
           title: { el: "LATTE ΚΡΥΟ", en: "ICED LATTE", tr: "BUZLU LATTE" },
@@ -166,7 +166,7 @@ export const Coffee = {
             tr: "Sütlü. Decaf mevcuttur.",
           },
           price: 2.9,
-          photoUrl: "/assets/ICED LATTE.jpg",
+          photoUrl: "/assets/ICED LATTE.avif",
         },
         {
           title: { el: "FREDDUCCINO", en: "FREDDUCCINO", tr: "FREDDUCCINO" },
@@ -176,7 +176,7 @@ export const Coffee = {
             tr: "Buzlu harmanlanmış kahve.",
           },
           price: 4.0,
-          photoUrl: "/assets/FREDDUCCINO.jpg",
+          photoUrl: "/assets/FREDDUCCINO.avif",
         },
       ],
     },
@@ -195,7 +195,7 @@ export const Coffee = {
             tr: "Tek | Çift. Decaf.",
           },
           price: 2.9,
-          photoUrl: "/assets/ESPRESSO.jpg",
+          photoUrl: "/assets/ESPRESSO.avif",
         },
         {
           title: { el: "CAPPUCCINO", en: "CAPPUCCINO", tr: "CAPPUCCINO" },
@@ -205,7 +205,7 @@ export const Coffee = {
             tr: "Tek | Çift. Decaf.",
           },
           price: 2.9,
-          photoUrl: "/assets/cappuccino.jpg",
+          photoUrl: "/assets/cappuccino.avif",
         },
         {
           title: {
@@ -219,7 +219,7 @@ export const Coffee = {
             tr: "Tek | Çift. Decaf.",
           },
           price: 2.0,
-          photoUrl: "/assets/GREEK COFFEE.jpg",
+          photoUrl: "/assets/GREEK COFFEE.avif",
         },
         {
           title: { el: "NESCAFE", en: "NESCAFE", tr: "NESCAFE" },
@@ -229,7 +229,7 @@ export const Coffee = {
             tr: "Sıcak hazır kahve. Decaf.",
           },
           price: 2.9,
-          photoUrl: "/assets/NESCAFE.jpg",
+          photoUrl: "/assets/NESCAFE.avif",
         },
         {
           title: { el: "MACCHIATO", en: "MACCHIATO", tr: "MACCHIATO" },
@@ -239,7 +239,7 @@ export const Coffee = {
             tr: "Çift (3.90€). Decaf seçeneği mevcuttur.",
           },
           price: 3.9,
-          photoUrl: "/assets/MACCHIATO.jpg",
+          photoUrl: "/assets/MACCHIATO.avif",
         },
         {
           title: { el: "LUNGO", en: "LUNGO", tr: "LUNGO" },
@@ -249,7 +249,7 @@ export const Coffee = {
             tr: "Çift (3.90€). Decaf seçeneği mevcuttur.",
           },
           price: 3.9,
-          photoUrl: "/assets/LUNGO.jpg",
+          photoUrl: "/assets/LUNGO.avif",
         },
         {
           title: { el: "AMERICANO", en: "AMERICANO", tr: "AMERICANO" },
@@ -259,7 +259,7 @@ export const Coffee = {
             tr: "Espresso sıcak su. Decaf.",
           },
           price: 2.9,
-          photoUrl: "/assets/AMERICANO.jpg",
+          photoUrl: "/assets/AMERICANO.avif",
         },
         {
           title: { el: "ΓΑΛΛΙΚΟΣ", en: "FILTER COFFEE", tr: "FİLTRE KAHVE" },
@@ -269,7 +269,7 @@ export const Coffee = {
             tr: "Filtre kahve. Decaf.",
           },
           price: 2.9,
-          photoUrl: "/assets/FILTER COFFEE.jpg",
+          photoUrl: "/assets/FILTER COFFEE.avif",
         },
       ],
     },
@@ -284,7 +284,7 @@ export const Coffee = {
             tr: "Sıcak veya Soğuk.",
           },
           price: 3.2,
-          photoUrl: "/assets/CHOCOLATE.jpg",
+          photoUrl: "/assets/CHOCOLATE.avif",
         },
         {
           title: { el: "MOCHACCINO", en: "MOCHACCINO", tr: "MOCHACCINO" },
@@ -294,7 +294,7 @@ export const Coffee = {
             tr: "Espresso ve çikolata. Sıcak/Soğuk.",
           },
           price: 3.5,
-          photoUrl: "/assets/MOCHACCINO.jpg",
+          photoUrl: "/assets/MOCHACCINO.avif",
         },
       ],
     },
@@ -323,7 +323,7 @@ export const Drinks = {
             en: ["Lemon", "Peach", "Green", "Raspberry", "Zero Sugar"],
             tr: ["Limon", "Şeftali", "Yeşil Çay", "Ahududu", "Şekersiz"],
           },
-          photoUrl: "/assets/LIPTON ICE TEA.jpg",
+          photoUrl: "/assets/LIPTON ICE TEA.avif",
         },
       ],
     },
@@ -346,7 +346,7 @@ export const Drinks = {
             tr: "Sıcak aromatik çay.",
           },
           price: 2.9,
-          photoUrl: "/assets/TEA HOT.jpg",
+          photoUrl: "/assets/TEA HOT.avif",
         },
         {
           title: { el: "ΧΑΜΟΜΗΛΙ", en: "CHAMOMILE", tr: "PAPATYA ÇAYI" },
@@ -356,7 +356,7 @@ export const Drinks = {
             tr: "Doğal rahatlatıcı bitki çayı.",
           },
           price: 2.9,
-          photoUrl: "/assets/CHAMOMILE.jpg",
+          photoUrl: "/assets/CHAMOMILE.avif",
         },
       ],
     },
@@ -420,7 +420,7 @@ export const Drinks = {
               "Hindistan Cevizi",
             ],
           },
-          photoUrl: "/assets/SLUSHIES.jpg",
+          photoUrl: "/assets/SLUSHIES.avif",
         },
       ],
     },
@@ -489,7 +489,7 @@ export const Drinks = {
             ],
             tr: ["Çilek", "Karpuz", "Mango", "Ananas", "Böğürtlen", "Şeftali"],
           },
-          photoUrl: "/assets/ALOE VERA DRINK.jpg",
+          photoUrl: "/assets/ALOE VERA DRINK.avif",
         },
       ],
     },
@@ -515,13 +515,13 @@ export const softDrinks = {
             tr: ["Classic", "Zero", "Light"],
           },
           description: { el: "", en: "", tr: "" },
-          photoUrl: "/assets/COCA COLA.jpg",
+          photoUrl: "/assets/COCA COLA.avif",
         },
         {
           title: { el: "PEPSI 330ml", en: "PEPSI 330ml", tr: "PEPSI 330ml" },
           price: 2.5,
           description: { el: "", en: "", tr: "" },
-          photoUrl: "/assets/PEPSI 330ml.jpg",
+          photoUrl: "/assets/PEPSI 330ml.avif",
         },
         {
           title: { el: "FANTA", en: "FANTA", tr: "FANTA" },
@@ -532,7 +532,7 @@ export const softDrinks = {
             tr: ["Portakallı", "Limonata", "Mavi"],
           },
           description: { el: "", en: "", tr: "" },
-          photoUrl: "/assets/FANTA.jpg",
+          photoUrl: "/assets/FANTA.avif",
         },
         {
           title: { el: "ΗΒΗ", en: "IVI", tr: "IVI" },
@@ -543,19 +543,19 @@ export const softDrinks = {
             tr: ["Portakallı", "Limonata", "Mavi Portakallı"],
           },
           description: { el: "", en: "", tr: "" },
-          photoUrl: "/assets/IVI.jpg",
+          photoUrl: "/assets/IVI.avif",
         },
         {
           title: { el: "SPRITE", en: "SPRITE", tr: "SPRITE" },
           price: 2.5,
           description: { el: "", en: "", tr: "" },
-          photoUrl: "/assets/SPRITE.jpg",
+          photoUrl: "/assets/SPRITE.avif",
         },
         {
           title: { el: "7UP", en: "7UP", tr: "7UP" },
           price: 2.5,
           description: { el: "", en: "", tr: "" },
-          photoUrl: "/assets/7UP.jpg",
+          photoUrl: "/assets/7UP.avif",
         },
         {
           title: {
@@ -582,7 +582,7 @@ export const softDrinks = {
             tr: ["Pink Grapefruit", "Orangeade", "Lemonade", "Nar", "Mojito"],
           },
           description: { el: "", en: "", tr: "" },
-          photoUrl: "/assets/SCHWEPPES 330ml.jpg",
+          photoUrl: "/assets/SCHWEPPES 330ml.avif",
         },
       ],
     },
@@ -601,7 +601,7 @@ export const softDrinks = {
           },
           price: 3.5,
           description: { el: "", en: "", tr: "" },
-          photoUrl: "/assets/FRESH ORANGE JUICE.jpg",
+          photoUrl: "/assets/FRESH ORANGE JUICE.avif",
         },
         {
           title: {
@@ -616,7 +616,7 @@ export const softDrinks = {
             tr: ["Portakal", "Elma", "Muz", "Şeftali"],
           },
           description: { el: "", en: "", tr: "" },
-          photoUrl: "/assets/FRESH MIXED JUICE.jpg",
+          photoUrl: "/assets/FRESH MIXED JUICE.avif",
         },
         {
           title: {
@@ -631,7 +631,7 @@ export const softDrinks = {
             tr: ["Karışık", "Portakal", "Vişne", "Şeftali"],
           },
           description: { el: "", en: "", tr: "" },
-          photoUrl: "/assets/JUICES (250ml).jpg",
+          photoUrl: "/assets/JUICES (250ml).avif",
         },
       ],
     },
@@ -651,7 +651,7 @@ export const softDrinks = {
             tr: ["Limon ve Mine Çiçeği", "Şeftali ve Hibiskus"],
           },
           description: { el: "", en: "", tr: "" },
-          photoUrl: "/assets/FUZE TEA 330ml.jpg",
+          photoUrl: "/assets/FUZE TEA 330ml.avif",
         },
       ],
     },
@@ -670,7 +670,7 @@ export const softDrinks = {
             en: "500ml / 1.5lt",
             tr: "500ml / 1.5lt",
           },
-          photoUrl: "/assets/NATURAL MINERAL WATER.jpg",
+          photoUrl: "/assets/NATURAL MINERAL WATER.avif",
         },
         {
           title: {
@@ -680,7 +680,7 @@ export const softDrinks = {
           },
           price: 2.5,
           description: { el: "", en: "", tr: "" },
-          photoUrl: "/assets/SPARKLING WATER.jpg",
+          photoUrl: "/assets/SPARKLING WATER.avif",
         },
       ],
     },
@@ -737,7 +737,7 @@ export const Alcohol = {
             ],
           },
           description: { el: "", en: "", tr: "" },
-          photoUrl: "/assets/LAGER & CLASSIC.jpg",
+          photoUrl: "/assets/LAGER & CLASSIC.avif",
         },
         {
           title: {
@@ -752,7 +752,7 @@ export const Alcohol = {
             tr: ["Mamos", "Kaiser", "Alfa Salt"],
           },
           description: { el: "", en: "", tr: "" },
-          photoUrl: "/assets/PILSNER & PREMIUM.jpg",
+          photoUrl: "/assets/PILSNER & PREMIUM.avif",
         },
         {
           title: {
@@ -767,7 +767,7 @@ export const Alcohol = {
             tr: ["Sedusa", "Nissiopi", "Nisos", "Fix Dark"],
           },
           description: { el: "", en: "", tr: "" },
-          photoUrl: "/assets/SPECIAL & LOCAL BREWS.jpg",
+          photoUrl: "/assets/SPECIAL & LOCAL BREWS.avif",
         },
         {
           title: {
@@ -930,7 +930,7 @@ export const Cocktails = {
           },
           description: { el: "", en: "", tr: "" },
           featured: true,
-          photoUrl: "/assets/MOJITO.jpg",
+          photoUrl: "/assets/MOJITO.avif",
         },
         {
           title: { el: "MAI TAI", en: "MAI TAI", tr: "MAI TAI" },
@@ -941,7 +941,7 @@ export const Cocktails = {
             tr: "Romatiz, orgeat, lime",
           },
           featured: true,
-          photoUrl: "/assets/MAI TAI.jpg",
+          photoUrl: "/assets/MAI TAI.avif",
         },
         {
           title: { el: "MARGARITA", en: "MARGARITA", tr: "MARGARITA" },
@@ -952,7 +952,7 @@ export const Cocktails = {
             tr: ["Klasik", "Frozen Çilek", "Frozen Karpuz"],
           },
           description: { el: "", en: "", tr: "" },
-          photoUrl: "/assets/MARGARITA.jpg",
+          photoUrl: "/assets/MARGARITA.avif",
         },
         {
           title: { el: "PINA COLADA", en: "PINA COLADA", tr: "PINA COLADA" },
@@ -962,7 +962,7 @@ export const Cocktails = {
             en: "Rum, coconut, pineapple juice",
             tr: "Romatiz, hindistan cevizi, ananas suyu",
           },
-          photoUrl: "/assets/PINA COLADA.jpg",
+          photoUrl: "/assets/PINA COLADA.avif",
         },
         {
           title: { el: "PALOMA", en: "PALOMA", tr: "PALOMA" },
@@ -972,7 +972,7 @@ export const Cocktails = {
             en: "Tequila, lime, pink grapefruit soda",
             tr: "Tekila, lime, greyfurt soda",
           },
-          photoUrl: "/assets/PALOMA.jpg",
+          photoUrl: "/assets/PALOMA.avif",
         },
       ],
     },
@@ -991,7 +991,7 @@ export const Cocktails = {
             en: "Gin, Campari, Sweet Vermouth",
             tr: "Cin, Campari, Vermut",
           },
-          photoUrl: "/assets/NEGRONI.jpg",
+          photoUrl: "/assets/NEGRONI.avif",
         },
         {
           title: { el: "DAIQUIRI", en: "DAIQUIRI", tr: "DAIQUIRI" },
@@ -1001,7 +1001,7 @@ export const Cocktails = {
             en: "Rum, lime, simple syrup",
             tr: "Romatiz, lime, şurup",
           },
-          photoUrl: "/assets/DAIQUIRI.jpg",
+          photoUrl: "/assets/DAIQUIRI.avif",
         },
         {
           title: { el: "COSMOPOLITAN", en: "COSMOPOLITAN", tr: "COSMOPOLITAN" },
@@ -1011,7 +1011,7 @@ export const Cocktails = {
             en: "Vodka, triple sec, cranberry, lime",
             tr: "Votka, triple sec, yaban mersini, lime",
           },
-          photoUrl: "/assets/COSMOPOLITAN.jpg",
+          photoUrl: "/assets/COSMOPOLITAN.avif",
         },
         {
           title: { el: "CUBA LIBRE", en: "CUBA LIBRE", tr: "CUBA LIBRE" },
@@ -1021,7 +1021,7 @@ export const Cocktails = {
             en: "Rum, cola, lime",
             tr: "Romatiz, kola, lime",
           },
-          photoUrl: "/assets/CUBA LIBRE.jpg",
+          photoUrl: "/assets/CUBA LIBRE.avif",
         },
         {
           title: {
@@ -1035,7 +1035,7 @@ export const Cocktails = {
             en: "Vodka, peach schnapps, orange, cranberry",
             tr: "Votka, şeftali, portakal, yaban mersini",
           },
-          photoUrl: "/assets/SEX ON THE BEACH.jpg",
+          photoUrl: "/assets/SEX ON THE BEACH.avif",
         },
       ],
     },
@@ -1054,7 +1054,7 @@ export const Cocktails = {
             en: "Cachaça, lime, sugar",
             tr: "Cachaça, lime, şeker",
           },
-          photoUrl: "/assets/CAIPIRINHA.jpg",
+          photoUrl: "/assets/CAIPIRINHA.avif",
         },
         {
           title: { el: "CAIPIROSCA", en: "CAIPIROSCA", tr: "CAIPIROSCA" },
@@ -1064,7 +1064,7 @@ export const Cocktails = {
             en: "Vodka, lime, sugar",
             tr: "Votka, lime, şeker",
           },
-          photoUrl: "/assets/CAIPIROSCA.jpg",
+          photoUrl: "/assets/CAIPIROSCA.avif",
         },
         {
           title: { el: "BRAMBLE", en: "BRAMBLE", tr: "BRAMBLE" },
@@ -1074,7 +1074,7 @@ export const Cocktails = {
             en: "Gin, lemon, blackberry liqueur",
             tr: "Cin, limon, böğürtlen likörü",
           },
-          photoUrl: "/assets/BRAMBLE.jpg",
+          photoUrl: "/assets/BRAMBLE.avif",
         },
       ],
     },
@@ -1093,7 +1093,7 @@ export const Cocktails = {
             en: "Whiskey, sweet vermouth, bitters",
             tr: "Viski, tatlı vermut",
           },
-          photoUrl: "/assets/MANHATTAN.jpg",
+          photoUrl: "/assets/MANHATTAN.avif",
         },
         {
           title: {
@@ -1107,7 +1107,7 @@ export const Cocktails = {
             en: "Whiskey, soda water, lemon",
             tr: "Viski, soda, limon",
           },
-          photoUrl: "/assets/WHISKEY HIGHBALL.jpg",
+          photoUrl: "/assets/WHISKEY HIGHBALL.avif",
         },
       ],
     },
@@ -1130,7 +1130,7 @@ export const Cocktails = {
             en: "Aperol, prosecco, soda",
             tr: "Aperol, prosecco, soda",
           },
-          photoUrl: "/assets/APEROL SPRITZ.jpg",
+          photoUrl: "/assets/APEROL SPRITZ.avif",
         },
         {
           title: {
@@ -1144,7 +1144,7 @@ export const Cocktails = {
             en: "Campari, prosecco, soda",
             tr: "Campari, prosecco, soda",
           },
-          photoUrl: "/assets/CAMPARI SPRITZ.jpg",
+          photoUrl: "/assets/CAMPARI SPRITZ.avif",
         },
       ],
     },
@@ -1181,7 +1181,7 @@ export const foodMenu = {
             en: "Includes: tomato, ketchup, mustard, mayo",
             tr: "İçindekiler: domates, ketçap, hardal, mayonez",
           },
-          photoUrl: "/assets/TOAST OR SANDWICH.jpg",
+          photoUrl: "/assets/TOAST OR SANDWICH.avif",
         },
         {
           title: {
@@ -1195,7 +1195,7 @@ export const foodMenu = {
             en: "Feta cheese, tomato, cucumber, olives, oregano, olive oil",
             tr: "Beyaz peynir, domates, salatalık, zeytin, kekik, zeytinyağı",
           },
-          photoUrl: "/assets/GREEK VILLAGE SANDWICH.jpg",
+          photoUrl: "/assets/GREEK VILLAGE SANDWICH.avif",
         },
         {
           title: {
@@ -1209,7 +1209,7 @@ export const foodMenu = {
             en: "Cheese, ham, bacon, lettuce, tomato, mayo. Served with fresh fries.",
             tr: "Peynir, jambon, pastırma, marul, domates, mayonez. Taze patates kızartması ile servis edilir.",
           },
-          photoUrl: "/assets/CLUB SANDWICH.jpg",
+          photoUrl: "/assets/CLUB SANDWICH.avif",
         },
       ],
     },
@@ -1233,7 +1233,7 @@ export const foodMenu = {
             tr: "Köfte, peynir, marul, domates, ketçap, hardal, turşu, Barbekü sos. Patates ile servis edilir.",
           },
           featured: true,
-          photoUrl: "/assets/CLASSIC BURGER.jpg",
+          photoUrl: "/assets/CLASSIC BURGER.avif",
         },
         {
           title: {
@@ -1247,7 +1247,7 @@ export const foodMenu = {
             en: "Ketchup, mustard",
             tr: "Ketçap, hardal",
           },
-          photoUrl: "/assets/CLASSIC HOT DOG.jpg",
+          photoUrl: "/assets/CLASSIC HOT DOG.avif",
         },
         {
           title: {
@@ -1261,7 +1261,7 @@ export const foodMenu = {
             en: "Cheddar, BBQ sauce, pickles, onion",
             tr: "Cheddar, Barbekü sos, turşu, soğan",
           },
-          photoUrl: "/assets/SPECIAL HOT DOG.jpg",
+          photoUrl: "/assets/SPECIAL HOT DOG.avif",
         },
       ],
     },
@@ -1280,7 +1280,7 @@ export const foodMenu = {
             en: "Classic chicken nuggets with fresh fries",
             tr: "Taze patates kızartması ile klasik tavuk nugget",
           },
-          photoUrl: "/assets/CHICKEN NUGGETS PLATE.jpg",
+          photoUrl: "/assets/CHICKEN NUGGETS PLATE.avif",
         },
         {
           title: {
@@ -1294,7 +1294,7 @@ export const foodMenu = {
             en: "Filled with Philadelphia cheese, served with fresh fries",
             tr: "Philadelphia peyniri dolgulu, taze patates kızartması ile",
           },
-          photoUrl: "/assets/CHICKEN NUGGETS PHILADELPHIA.jpg",
+          photoUrl: "/assets/CHICKEN NUGGETS PHILADELPHIA.avif",
         },
         {
           title: {
@@ -1308,7 +1308,7 @@ export const foodMenu = {
             en: "Freshly cut fries",
             tr: "Taze kesilmiş patates",
           },
-          photoUrl: "/assets/FRENCH FRIES.jpg",
+          photoUrl: "/assets/FRENCH FRIES.avif",
         },
       ],
     },
@@ -1323,7 +1323,7 @@ export const foodMenu = {
           title: { el: "ΧΩΡΙΑΤΙΚΗ", en: "GREEK SALAD", tr: "YUNAN SALATASI" },
           price: 7.5,
           description: { el: "", en: "", tr: "" },
-          photoUrl: "/assets/GREEK SALAD.jpg",
+          photoUrl: "/assets/GREEK SALAD.avif",
         },
         {
           title: { el: "ΝΤΑΚΟΣ", en: "DAKOS SALAD", tr: "DAKOS" },
@@ -1333,19 +1333,19 @@ export const foodMenu = {
             en: "Cretan rusk, tomato, feta, capers",
             tr: "Girit peksimeti, domates, beyaz peynir",
           },
-          photoUrl: "/assets/DAKOS SALAD.jpg",
+          photoUrl: "/assets/DAKOS SALAD.avif",
         },
         {
           title: { el: "CHEF SALAD", en: "CHEF SALAD", tr: "ŞEFİN SALATASI" },
           price: 8.0,
           description: { el: "", en: "", tr: "" },
-          photoUrl: "/assets/CHEF SALAD.jpg",
+          photoUrl: "/assets/CHEF SALAD.avif",
         },
         {
           title: { el: "ΤΖΑΤΖΙΚΙ", en: "TZATZIKI", tr: "CACIK" },
           price: 4.5,
           description: { el: "Χειροποίητο", en: "Handmade", tr: "El yapımı" },
-          photoUrl: "/assets/TZATZIKI.jpg",
+          photoUrl: "/assets/TZATZIKI.avif",
         },
         {
           title: {
@@ -1359,7 +1359,7 @@ export const foodMenu = {
             en: "With seasonal fruits",
             tr: "Mevsim meyveleri ile",
           },
-          photoUrl: "/assets/FRUIT SALAD.jpg",
+          photoUrl: "/assets/FRUIT SALAD.avif",
         },
       ],
     },
@@ -1374,7 +1374,7 @@ export const foodMenu = {
           title: { el: "ΣΟΥΒΛΑΚΙ ΧΟΙΡΙΝΟ", en: "PORK SKEWER", tr: "DOMUZ ŞİŞ" },
           price: 2.2,
           description: { el: "Τεμάχιο", en: "Per piece", tr: "Adet" },
-          photoUrl: "/assets/PORK SKEWER.jpg",
+          photoUrl: "/assets/PORK SKEWER.avif",
         },
         {
           title: {
@@ -1389,13 +1389,13 @@ export const foodMenu = {
           title: { el: "ΜΠΙΦΤΕΚΙ", en: "BEEF PATTY", tr: "KÖFTE" },
           price: 2.5,
           description: { el: "Τεμάχιο", en: "Per piece", tr: "Adet" },
-          photoUrl: "/assets/BEEF PATTY.jpg",
+          photoUrl: "/assets/BEEF PATTY.avif",
         },
         {
           title: { el: "ΚΕΜΠΑΠ", en: "KEBAB", tr: "KEBAP" },
           price: 2.5,
           description: { el: "Τεμάχιο", en: "Per piece", tr: "Adet" },
-          photoUrl: "/assets/KEBAB.jpg",
+          photoUrl: "/assets/KEBAB.avif",
         },
         {
           title: {
@@ -1405,13 +1405,13 @@ export const foodMenu = {
           },
           price: 2.5,
           description: { el: "Τεμάχιο", en: "Per piece", tr: "Adet" },
-          photoUrl: "/assets/TRADITIONAL SAUSAGE.jpg",
+          photoUrl: "/assets/TRADITIONAL SAUSAGE.avif",
         },
         {
           title: { el: "ΠΙΤΑ", en: "PITA BREAD", tr: "PİTA EKMEĞΙ" },
           price: 0.5,
           description: { el: "Τεμάχιο", en: "Per piece", tr: "Adet" },
-          photoUrl: "/assets/PITA BREAD.jpg",
+          photoUrl: "/assets/PITA BREAD.avif",
         },
       ],
     },

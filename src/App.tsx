@@ -96,14 +96,19 @@ export default function App() {
 
   const onCategoryClick = (id: string) => {
     setOpenCategories((prev) => ({ ...prev, [id]: true }));
-    const element = document.getElementById(id);
-    if (element) {
-      const offset = 80;
-      const bodyRect = document.body.getBoundingClientRect().top;
-      const elementRect = element.getBoundingClientRect().top;
-      const elementPosition = elementRect - bodyRect;
-      window.scrollTo({ top: elementPosition - offset, behavior: "smooth" });
-    }
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      if (element) {
+        const offset = 90; // Λίγο παραπάνω περιθώριο για το fixed header
+        const elementPosition =
+          element.getBoundingClientRect().top + window.scrollY;
+
+        window.scrollTo({
+          top: elementPosition - offset,
+          behavior: "smooth",
+        });
+      }
+    }, 100); // 100ms είναι συνήθως αρκετά για να προλάβει το render
   };
   const handleToggleCategory = (id: string) => {
     setOpenCategories((prev) => ({ ...prev, [id]: !prev[id] }));

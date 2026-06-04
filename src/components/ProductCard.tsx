@@ -1,5 +1,4 @@
 import { type Product } from "../data/data";
-
 interface ProductCardProps {
   lang: "el" | "en" | "tr";
   product: Product;
@@ -57,7 +56,16 @@ export default function ProductCard({
           <img
             src={hasPhotoUrl}
             alt={product.title[lang]}
-            className="w-16 h-16 sm:w-20 sm:h-20 object-cover rounded-lg shrink-0"
+            width="80"
+            height="80"
+            loading="lazy"
+            decoding="async"
+            className="w-16 h-16 sm:w-20 sm:h-20 object-cover rounded-lg shrink-0 bg-sand-200 animate-pulse"
+            onLoad={(e) => {
+              // Αυτό είναι το πιο απλό hack για να φύγει το animation
+              e.currentTarget.classList.remove("animate-pulse");
+              e.currentTarget.classList.remove("bg-sand-200");
+            }}
           />
         )}
 
