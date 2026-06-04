@@ -72,11 +72,11 @@ export default function ProductCard({
         <div className="flex flex-col flex-1 min-w-0">
           {" "}
           <div className="flex items-start justify-between gap-2">
-            <h4 className="font-title text-base font-semibold text-seed uppercase tracking-wide leading-tight truncate">
+            <h4 className="font-title text-base font-semibold text-seed uppercase tracking-wide leading-tight line-clamp-2">
               {product.title[lang]}
             </h4>
 
-            <span className="font-title text-sm font-bold text-watermelon-700 bg-watermelon-50 px-2 py-0.5 rounded-md whitespace-nowrap">
+            <span className="font-title text-sm font-bold text-watermelon-700 bg-watermelon-50 px-2 py-0.5 rounded-md whitespace-nowrap shrink-0">
               {priceDisplay}
             </span>
           </div>
