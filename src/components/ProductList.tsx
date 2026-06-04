@@ -1,6 +1,6 @@
 import ProductCard from "./ProductCard";
 import { type Product } from "../data/data";
-import { useState, useRef } from "react";
+import { useRef } from "react";
 
 interface SubCategory {
   subTitle: { el: string; en: string; tr: string };
