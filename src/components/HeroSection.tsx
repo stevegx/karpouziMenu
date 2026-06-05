@@ -67,6 +67,24 @@ export default function HeroSection({ lang, setLang, languages }: HeroProps) {
             </button>
           ))}
         </div>
+
+        {/* Photo disclaimer */}
+        <p className="font-body italic text-[0.78rem] text-white/75 leading-snug mt-6 max-w-sm mx-auto px-4">
+          {lang === "el"
+            ? "📸 Οι φωτογραφίες είναι ενδεικτικές και ενδέχεται να διαφέρουν από το τελικό προϊόν."
+            : lang === "en"
+              ? "📸 Photos are for illustration only and may differ from the actual product."
+              : "📸 Fotoğraflar yalnızca tanıtım amaçlıdır ve gerçek üründen farklı olabilir."}
+        </p>
+
+        {/* Allergen disclaimer */}
+        <p className="font-body italic text-[0.78rem] text-white/75 leading-snug mt-2 max-w-sm mx-auto px-4">
+          {lang === "el"
+            ? "ℹ️ Για περισσότερες πληροφορίες σχετικά με αλλεργιογόνα ή συστατικά, μη διστάσετε να ρωτήσετε τον σερβιτόρο μας."
+            : lang === "en"
+              ? "ℹ️ For more information about allergens or ingredients, please ask our staff."
+              : "ℹ️ Alerjenler veya içerikler hakkında daha fazla bilgi için lütfen personelimize danışın."}
+        </p>
       </div>
     </header>
   );

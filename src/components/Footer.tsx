@@ -11,7 +11,7 @@ export default function Footer({ lang }: footerProps) {
     <footer className="bg-seed text-white pt-10 px-6 pb-8 mt-6 flex flex-col items-center gap-5">
       {/* Rate us button */}
       <a
-        href="https://www.google.com/search?..."
+        href="https://www.google.com/search?sca_esv=35896ee927ddd118&rlz=1C1GCEA_enGR1130GR1130&sxsrf=ANbL-n65M3mbHfAgCEtoW_YnsSBAUEdXzA:1780669228701&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOZqyixnWShOpCUgK3viTv489ZBhxn04X57aXrK1NUcmMmZ5M8EYaffQ2VWZI2HiKSsVB2anHBQT-RxGES1r9XwyLvSHJLmAgxTTJSyLLVmn9XmUc4w%3D%3D&q=Kantina+to+karpouzi+%CE%9A%CF%81%CE%B9%CF%84%CE%B9%CE%BA%CE%AD%CF%82&sa=X&ved=2ahUKEwjjgdvmpfCUAxWESfEDHazNFK0Q0bkNegQIHRAF&biw=1920&bih=945&dpr=1"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Αξιολόγησε μας στο Google"
@@ -70,6 +70,25 @@ export default function Footer({ lang }: footerProps) {
         >
           Watermelon icons created by juicy_fish - Flaticon
         </a>
+
+        {/* Photo disclaimer */}
+        <p className="font-body text-[0.7rem] text-white/55 italic max-w-md leading-relaxed mt-4 mb-1 px-2">
+          {lang === "el"
+            ? "📸 Οι φωτογραφίες των προϊόντων είναι ενδεικτικές και ενδέχεται να διαφέρουν από το τελικό προϊόν που σερβίρεται."
+            : lang === "en"
+              ? "📸 Product photos are for illustration purposes only and may differ from the actual product served."
+              : "📸 Ürün fotoğrafları yalnızca tanıtım amaçlıdır ve servis edilen üründen farklı olabilir."}
+        </p>
+
+        {/* Allergen disclaimer */}
+        <p className="font-body text-[0.7rem] text-white/55 italic max-w-md leading-relaxed mb-3 px-2">
+          {lang === "el"
+            ? "ℹ️ Για περισσότερες πληροφορίες σχετικά με αλλεργιογόνα ή συστατικά, καλό θα ήταν να ρωτήσετε τον σερβιτόρο μας για σιγουριά."
+            : lang === "en"
+              ? "ℹ️ For additional information about allergens or ingredients, please feel free to ask our staff."
+              : "ℹ️ Alerjenler veya içerikler hakkında ek bilgi için lütfen personelimize danışmanızı öneririz."}
+        </p>
+
         <div className="border-t border-white/8 pt-3 text-[0.8rem] uppercase tracking-widest text-white/60">
           &copy; 2026 Karpouzi Cantina — All Rights Reserved
           <br />
