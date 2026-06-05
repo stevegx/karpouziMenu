@@ -1,4 +1,5 @@
-import watermelon from "../assets/watermelon.png";
+import watermelonWebp from "../assets/watermelon.webp";
+import watermelonPng from "../assets/watermelon.png";
 
 interface HeroProps {
   lang: string;
@@ -16,18 +17,32 @@ export default function HeroSection({ lang, setLang, languages }: HeroProps) {
       <div className="absolute pointer-events-none -top-12 -right-12 w-48 h-48 bg-white/8 rounded-full" />
       <div className="absolute pointer-events-none -bottom-16 -left-16 w-64 h-64 bg-white/5 rounded-full" />
 
-      <img
-        src={watermelon}
-        alt=""
-        className="absolute z-20 top-2 left-5 rotate-190 w-22 opacity-70"
-        aria-hidden="true"
-      />
-      <img
-        src={watermelon}
-        alt=""
-        className="absolute z-10 -bottom-10 right-0 -translate-y-1/2 w-40 h-40 opacity-70"
-        aria-hidden="true"
-      />
+      <picture>
+        <source srcSet={watermelonWebp} type="image/webp" />
+        <img
+          src={watermelonPng}
+          alt=""
+          width="88"
+          height="88"
+          decoding="async"
+          fetchPriority="high"
+          className="absolute z-20 top-2 left-5 rotate-190 w-22 opacity-70"
+          aria-hidden="true"
+        />
+      </picture>
+      <picture>
+        <source srcSet={watermelonWebp} type="image/webp" />
+        <img
+          src={watermelonPng}
+          alt=""
+          width="160"
+          height="160"
+          decoding="async"
+          fetchPriority="high"
+          className="absolute z-10 -bottom-10 right-0 -translate-y-1/2 w-40 h-40 opacity-70"
+          aria-hidden="true"
+        />
+      </picture>
 
       {/* Logo & tagline */}
       <div className="relative z-20">

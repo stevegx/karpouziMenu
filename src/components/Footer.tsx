@@ -11,7 +11,7 @@ export default function Footer({ lang }: footerProps) {
     <footer className="bg-seed text-white pt-10 px-6 pb-8 mt-6 flex flex-col items-center gap-5">
       {/* Rate us button */}
       <a
-        href="https://www.google.com/search?sca_esv=35896ee927ddd118&rlz=1C1GCEA_enGR1130GR1130&sxsrf=ANbL-n65M3mbHfAgCEtoW_YnsSBAUEdXzA:1780669228701&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOZqyixnWShOpCUgK3viTv489ZBhxn04X57aXrK1NUcmMmZ5M8EYaffQ2VWZI2HiKSsVB2anHBQT-RxGES1r9XwyLvSHJLmAgxTTJSyLLVmn9XmUc4w%3D%3D&q=Kantina+to+karpouzi+%CE%9A%CF%81%CE%B9%CF%84%CE%B9%CE%BA%CE%AD%CF%82&sa=X&ved=2ahUKEwjjgdvmpfCUAxWESfEDHazNFK0Q0bkNegQIHRAF&biw=1920&bih=945&dpr=1"
+        href="https://www.google.com/search?..."
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Αξιολόγησε μας στο Google"
