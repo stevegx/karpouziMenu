@@ -8,6 +8,88 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
+/* ============================================================
+   ΑΛΛΕΡΓΙΟΓΟΝΑ — EU 1169/2011
+   ============================================================ */
+
+export type Allergen =
+  | "gluten" // 🌾 Δημητριακά με γλουτένη
+  | "crustaceans" // 🦐 Καρκινοειδή
+  | "eggs" // 🥚 Αυγά
+  | "fish" // 🐟 Ψάρι
+  | "peanuts" // 🥜 Αραχίδες
+  | "soy" // 🫘 Σόγια
+  | "milk" // 🥛 Γαλακτοκομικά (περιλ. λακτόζη)
+  | "nuts" // 🌰 Καρποί με κέλυφος
+  | "celery" // 🌿 Σέλινο
+  | "mustard" // 🟡 Μουστάρδα
+  | "sesame" // 🌻 Σουσάμι
+  | "sulphites" // 🍷 Διοξείδιο του θείου
+  | "lupin" // 🌼 Λούπινο
+  | "molluscs"; // 🐚 Μαλάκια
+
+export const allergenInfo: Record<
+  Allergen,
+  { icon: string; label: { el: string; en: string; tr: string } }
+> = {
+  gluten: {
+    icon: "🌾",
+    label: { el: "Γλουτένη", en: "Gluten", tr: "Gluten" },
+  },
+  crustaceans: {
+    icon: "🦐",
+    label: { el: "Καρκινοειδή", en: "Crustaceans", tr: "Kabuklular" },
+  },
+  eggs: { icon: "🥚", label: { el: "Αυγά", en: "Eggs", tr: "Yumurta" } },
+  fish: { icon: "🐟", label: { el: "Ψάρι", en: "Fish", tr: "Balık" } },
+  peanuts: {
+    icon: "🥜",
+    label: { el: "Αραχίδες", en: "Peanuts", tr: "Yer fıstığı" },
+  },
+  soy: { icon: "🫘", label: { el: "Σόγια", en: "Soy", tr: "Soya" } },
+  milk: {
+    icon: "🥛",
+    label: { el: "Γαλακτοκομικά", en: "Dairy", tr: "Süt ürünleri" },
+  },
+  nuts: {
+    icon: "🌰",
+    label: { el: "Ξηροί καρποί", en: "Tree nuts", tr: "Sert kabuklu yemiş" },
+  },
+  celery: { icon: "🌿", label: { el: "Σέλινο", en: "Celery", tr: "Kereviz" } },
+  mustard: {
+    icon: "🟡",
+    label: { el: "Μουστάρδα", en: "Mustard", tr: "Hardal" },
+  },
+  sesame: {
+    icon: "🌻",
+    label: { el: "Σουσάμι", en: "Sesame", tr: "Susam" },
+  },
+  sulphites: {
+    icon: "🍷",
+    label: { el: "Θειώδη", en: "Sulphites", tr: "Sülfit" },
+  },
+  lupin: { icon: "🌼", label: { el: "Λούπινο", en: "Lupin", tr: "Acı bakla" } },
+  molluscs: {
+    icon: "🐚",
+    label: { el: "Μαλάκια", en: "Molluscs", tr: "Yumuşakçalar" },
+  },
+};
+
+export const dietLabels = {
+  vegetarian: {
+    icon: "🌱",
+    label: { el: "Χορτοφαγικό", en: "Vegetarian", tr: "Vejetaryen" },
+  },
+  vegan: {
+    icon: "🌿",
+    label: { el: "Vegan", en: "Vegan", tr: "Vegan" },
+  },
+  spicy: {
+    icon: "🌶️",
+    label: { el: "Πικάντικο", en: "Spicy", tr: "Acılı" },
+  },
+} as const;
+
 export const promos = {
   el: [
     "☀️ Καλοκαιρινή γρανίτα με 14 γεύσεις — δοκίμασε τη!",
@@ -107,6 +189,10 @@ export interface Product {
   featured?: boolean;
   flavors: { el: []; en: []; tr: [] };
   photoUrl?: string;
+  allergens?: Allergen[];
+  vegetarian?: boolean;
+  vegan?: boolean;
+  spicy?: boolean;
 }
 
 export const Coffee = {
@@ -133,6 +219,7 @@ export const Coffee = {
           price: 2.5,
           featured: true,
           photoUrl: "/assets/FREDDO ESPRESSO.avif",
+          vegan: true,
         },
         {
           title: {
@@ -142,21 +229,24 @@ export const Coffee = {
           },
           description: {
             el: "Κανονικό (3.00€) | Τετραπλό (4.00€). Decaf.",
-            en: "Regular | Quad. Decaf.",
-            tr: "Normal | Quad. Decaf.",
+            en: "Regular (3.00€) | Quad (4.00€). Decaf available.",
+            tr: "Normal (3.00€) | Quad (4.00€). Decaf mevcuttur.",
           },
           price: 3.0,
           photoUrl: "/assets/FREDDO CAPPUCCINO.avif",
+          allergens: ["milk"],
+          vegetarian: true,
         },
         {
           title: { el: "ΦΡΑΠΕ", en: "FRAPPE", tr: "FRAPPE" },
           description: {
-            el: "Διαθέσιμο και σε Decaf.",
-            en: "Also available in Decaf.",
-            tr: "Decaf mevcuttur.",
+            el: "Σερβίρεται σκέτος. Διαθέσιμος σε Decaf. Γάλα κατόπιν αιτήματος.",
+            en: "Served plain. Decaf available. Milk on request.",
+            tr: "Sade servis edilir. Decaf mevcuttur. İsteğe bağlı süt.",
           },
           price: 2,
           photoUrl: "/assets/FRAPPE.avif",
+          vegan: true,
         },
         {
           title: { el: "LATTE ΚΡΥΟ", en: "ICED LATTE", tr: "BUZLU LATTE" },
@@ -167,6 +257,8 @@ export const Coffee = {
           },
           price: 3,
           photoUrl: "/assets/ICED LATTE.avif",
+          allergens: ["milk"],
+          vegetarian: true,
         },
         {
           title: { el: "FREDDUCCINO", en: "FREDDUCCINO", tr: "FREDDUCCINO" },
@@ -177,6 +269,8 @@ export const Coffee = {
           },
           price: 3.5,
           photoUrl: "/assets/FREDDUCCINO.avif",
+          allergens: ["milk"],
+          vegetarian: true,
         },
       ],
     },
@@ -191,35 +285,39 @@ export const Coffee = {
           title: { el: "ESPRESSO", en: "ESPRESSO", tr: "ESPRESSO" },
           description: {
             el: "Μονό (2.00€) | Διπλό (2.50€). Decaf.",
-            en: "Single | Double. Decaf.",
-            tr: "Tek | Çift. Decaf.",
+            en: "Single (2.00€) | Double (2.50€). Decaf available.",
+            tr: "Tek (2.00€) | Çift (2.50€). Decaf mevcuttur.",
           },
           price: 2,
           photoUrl: "/assets/ESPRESSO.avif",
+          vegan: true,
         },
         {
           title: { el: "CAPPUCCINO", en: "CAPPUCCINO", tr: "CAPPUCCINO" },
           description: {
             el: "Μονό (2.20€) | Διπλό (3.00€). Decaf.",
-            en: "Single | Double. Decaf.",
-            tr: "Tek | Çift. Decaf.",
+            en: "Single (2.20€) | Double (3.00€). Decaf available.",
+            tr: "Tek (2.20€) | Çift (3.00€). Decaf mevcuttur.",
           },
           price: 2.2,
           photoUrl: "/assets/cappuccino.avif",
+          allergens: ["milk"],
+          vegetarian: true,
         },
         {
           title: {
             el: "ΕΛΛΗΝΙΚΟΣ ΚΑΦΕΣ",
             en: "GREEK COFFEE",
-            tr: "YUNAN KAHVESI",
+            tr: "YUNAN KAHVESİ",
           },
           description: {
-            el: "Μονός (1.5€) | Διπλός (2.00€). Decaf.",
-            en: "Single | Double. Decaf.",
-            tr: "Tek | Çift. Decaf.",
+            el: "Μονός (1.50€) | Διπλός (2.00€). Decaf.",
+            en: "Single (1.50€) | Double (2.00€). Decaf available.",
+            tr: "Tek (1.50€) | Çift (2.00€). Decaf mevcuttur.",
           },
           price: 1.5,
           photoUrl: "/assets/GREEK COFFEE.avif",
+          vegan: true,
         },
         {
           title: { el: "NESCAFE", en: "NESCAFE", tr: "NESCAFE" },
@@ -230,6 +328,8 @@ export const Coffee = {
           },
           price: 2,
           photoUrl: "/assets/NESCAFE.avif",
+          allergens: ["milk"],
+          vegetarian: true,
         },
         {
           title: { el: "MACCHIATO", en: "MACCHIATO", tr: "MACCHIATO" },
@@ -240,6 +340,8 @@ export const Coffee = {
           },
           price: 2,
           photoUrl: "/assets/MACCHIATO.avif",
+          allergens: ["milk"],
+          vegetarian: true,
         },
         {
           title: { el: "LUNGO", en: "LUNGO", tr: "LUNGO" },
@@ -250,6 +352,7 @@ export const Coffee = {
           },
           price: 2,
           photoUrl: "/assets/LUNGO.avif",
+          vegan: true,
         },
         {
           title: { el: "AMERICANO", en: "AMERICANO", tr: "AMERICANO" },
@@ -260,6 +363,7 @@ export const Coffee = {
           },
           price: 2.5,
           photoUrl: "/assets/AMERICANO.avif",
+          vegan: true,
         },
         {
           title: { el: "ΓΑΛΛΙΚΟΣ", en: "FILTER COFFEE", tr: "FİLTRE KAHVE" },
@@ -270,11 +374,12 @@ export const Coffee = {
           },
           price: 2.5,
           photoUrl: "/assets/FILTER COFFEE.avif",
+          vegan: true,
         },
       ],
     },
     {
-      subTitle: { el: "ΣΟΚΟΛΑΤΕΣ", en: "CHOCOLATES", tr: "ÇΙΚOLATALAR" },
+      subTitle: { el: "ΣΟΚΟΛΑΤΕΣ", en: "CHOCOLATES", tr: "ÇİKOLATALAR" },
       items: [
         {
           title: { el: "ΣΟΚΟΛΑΤΑ", en: "CHOCOLATE", tr: "ÇİKOLATA" },
@@ -285,6 +390,8 @@ export const Coffee = {
           },
           price: 3.5,
           photoUrl: "/assets/CHOCOLATE.avif",
+          allergens: ["milk"],
+          vegetarian: true,
         },
         {
           title: { el: "MOCHACCINO", en: "MOCHACCINO", tr: "MOCHACCINO" },
@@ -295,6 +402,8 @@ export const Coffee = {
           },
           price: 4,
           photoUrl: "/assets/MOCHACCINO.avif",
+          allergens: ["milk"],
+          vegetarian: true,
         },
       ],
     },
@@ -302,7 +411,7 @@ export const Coffee = {
 };
 
 export const Drinks = {
-  categoryTitle: { el: "ΡΟΦΗΜΑΤΑ", en: "DRINKS", tr: "İÇECEKLER" },
+  categoryTitle: { el: "ΡΟΦΗΜΑΤΑ", en: "BEVERAGES", tr: "İÇECEKLER" },
   subCategories: [
     {
       subTitle: {
@@ -324,6 +433,7 @@ export const Drinks = {
             tr: ["Limon", "Şeftali", "Yeşil Çay", "Ahududu", "Şekersiz"],
           },
           photoUrl: "/assets/LIPTON ICE TEA.avif",
+          vegan: true,
         },
       ],
     },
@@ -338,7 +448,7 @@ export const Drinks = {
           title: {
             el: "ΤΣΑΙ (ΜΑΥΡΟ / ΠΡΑΣΙΝΟ)",
             en: "TEA (BLACK / GREEN)",
-            tr: "ÇAY (SİYAH / YEΣΙΛ)",
+            tr: "ÇAY (SİYAH / YEŞİL)",
           },
           description: {
             el: "Ζεστό αρωματικό τσάι.",
@@ -347,6 +457,7 @@ export const Drinks = {
           },
           price: 2,
           photoUrl: "/assets/TEA HOT.avif",
+          vegan: true,
         },
         {
           title: { el: "ΧΑΜΟΜΗΛΙ", en: "CHAMOMILE", tr: "PAPATYA ÇAYI" },
@@ -357,6 +468,7 @@ export const Drinks = {
           },
           price: 1.5,
           photoUrl: "/assets/CHAMOMILE.avif",
+          vegan: true,
         },
       ],
     },
@@ -421,6 +533,7 @@ export const Drinks = {
             ],
           },
           photoUrl: "/assets/SLUSHIES.avif",
+          vegan: true,
         },
       ],
     },
@@ -456,7 +569,8 @@ export const Drinks = {
               "Karışık Narenciye",
             ],
           },
-          photoUrl: "/assets/GIA GIA MAS.png",
+          photoUrl: "/assets/GIA GIA MAS.avif",
+          vegan: true,
         },
       ],
     },
@@ -490,6 +604,7 @@ export const Drinks = {
             tr: ["Çilek", "Karpuz", "Mango", "Ananas", "Böğürtlen", "Şeftali"],
           },
           photoUrl: "/assets/ALOE VERA DRINK.avif",
+          vegan: true,
         },
       ],
     },
@@ -498,9 +613,9 @@ export const Drinks = {
 
 export const softDrinks = {
   categoryTitle: {
-    el: "ΑΝΑΨΥΚΤΙΚΑ & ΧΥΜΟΙ",
-    en: "SOFT DRINKS & JUICES",
-    tr: "MEŞRUBAT VE MEYVE SULARI",
+    el: "ΑΝΑΨΥΚΤΙΚΑ",
+    en: "SOFT DRINKS",
+    tr: "MEŞRUBAT",
   },
   subCategories: [
     {
@@ -516,12 +631,14 @@ export const softDrinks = {
           },
           description: { el: "", en: "", tr: "" },
           photoUrl: "/assets/COCA COLA.avif",
+          vegan: true,
         },
         {
           title: { el: "PEPSI 330ml", en: "PEPSI 330ml", tr: "PEPSI 330ml" },
           price: 2,
           description: { el: "", en: "", tr: "" },
           photoUrl: "/assets/PEPSI 330ml.avif",
+          vegan: true,
         },
         {
           title: { el: "FANTA", en: "FANTA", tr: "FANTA" },
@@ -533,6 +650,7 @@ export const softDrinks = {
           },
           description: { el: "", en: "", tr: "" },
           photoUrl: "/assets/FANTA.avif",
+          vegan: true,
         },
         {
           title: { el: "ΗΒΗ", en: "IVI", tr: "IVI" },
@@ -544,18 +662,21 @@ export const softDrinks = {
           },
           description: { el: "", en: "", tr: "" },
           photoUrl: "/assets/IVI.avif",
+          vegan: true,
         },
         {
           title: { el: "SPRITE", en: "SPRITE", tr: "SPRITE" },
           price: 2,
           description: { el: "", en: "", tr: "" },
           photoUrl: "/assets/SPRITE.avif",
+          vegan: true,
         },
         {
           title: { el: "7UP", en: "7UP", tr: "7UP" },
           price: 2,
           description: { el: "", en: "", tr: "" },
           photoUrl: "/assets/7UP.avif",
+          vegan: true,
         },
         {
           title: {
@@ -583,6 +704,7 @@ export const softDrinks = {
           },
           description: { el: "", en: "", tr: "" },
           photoUrl: "/assets/SCHWEPPES 330ml.avif",
+          vegan: true,
         },
       ],
     },
@@ -602,6 +724,7 @@ export const softDrinks = {
           price: 3.5,
           description: { el: "", en: "", tr: "" },
           photoUrl: "/assets/FRESH ORANGE JUICE.avif",
+          vegan: true,
         },
         {
           title: {
@@ -617,6 +740,7 @@ export const softDrinks = {
           },
           description: { el: "", en: "", tr: "" },
           photoUrl: "/assets/FRESH MIXED JUICE.avif",
+          vegan: true,
         },
         {
           title: {
@@ -632,6 +756,7 @@ export const softDrinks = {
           },
           description: { el: "", en: "", tr: "" },
           photoUrl: "/assets/JUICES (250ml).avif",
+          vegan: true,
         },
       ],
     },
@@ -652,6 +777,7 @@ export const softDrinks = {
           },
           description: { el: "", en: "", tr: "" },
           photoUrl: "/assets/FUZE TEA 330ml.avif",
+          vegan: true,
         },
       ],
     },
@@ -671,6 +797,7 @@ export const softDrinks = {
             tr: "500ml / 1.5lt",
           },
           photoUrl: "/assets/NATURAL MINERAL WATER.avif",
+          vegan: true,
         },
         {
           title: {
@@ -681,6 +808,7 @@ export const softDrinks = {
           price: 2.5,
           description: { el: "", en: "", tr: "" },
           photoUrl: "/assets/SPARKLING WATER.avif",
+          vegan: true,
         },
       ],
     },
@@ -688,9 +816,9 @@ export const softDrinks = {
 };
 export const Alcohol = {
   categoryTitle: {
-    el: "ΑΛΚΟΟΛΟΥΧΑ",
-    en: "ALCOHOLIC DRINKS",
-    tr: "ALKOLLÜ İÇECEKLER",
+    el: "ΑΛΚΟΟΛ",
+    en: "ALCOHOL",
+    tr: "ALKOL",
   },
   subCategories: [
     {
@@ -734,11 +862,12 @@ export const Alcohol = {
               "Vergina",
               "Amstel",
               "Heineken",
-              "Νήσος",
             ],
           },
           description: { el: "", en: "", tr: "" },
           photoUrl: "/assets/LAGER & CLASSIC.avif",
+          allergens: ["gluten"],
+          vegan: true,
         },
         {
           title: {
@@ -754,6 +883,8 @@ export const Alcohol = {
           },
           description: { el: "", en: "", tr: "" },
           photoUrl: "/assets/PILSNER & PREMIUM.avif",
+          allergens: ["gluten"],
+          vegan: true,
         },
         {
           title: {
@@ -763,12 +894,14 @@ export const Alcohol = {
           },
           price: 4.0,
           flavors: {
-            el: ["Sedusa", "Nissiopi", "Fix Dark"],
+            el: ["Sedusa", "Nissiopi", "Νήσος", "Fix Dark"],
             en: ["Sedusa", "Nissiopi", "Nisos", "Fix Dark"],
             tr: ["Sedusa", "Nissiopi", "Nisos", "Fix Dark"],
           },
           description: { el: "", en: "", tr: "" },
           photoUrl: "/assets/SPECIAL & LOCAL BREWS.avif",
+          allergens: ["gluten"],
+          vegan: true,
         },
         {
           title: {
@@ -783,10 +916,13 @@ export const Alcohol = {
             tr: ["Alfa Free", "Fix Free", "Radler"],
           },
           description: { el: "", en: "", tr: "" },
+          allergens: ["gluten"],
+          vegan: true,
         },
         {
           title: { el: "BUNDABERG", en: "BUNDABERG", tr: "BUNDABERG" },
           price: 3.0,
+          vegan: true,
         },
       ],
     },
@@ -806,6 +942,8 @@ export const Alcohol = {
             tr: ["Karpuz", "Limon", "Portakal"],
           },
           description: { el: "", en: "", tr: "" },
+          allergens: ["sulphites"],
+          vegan: true,
         },
         {
           title: {
@@ -820,6 +958,8 @@ export const Alcohol = {
             tr: ["Gordon's Space", "Smirnoff Ice"],
           },
           description: { el: "", en: "", tr: "" },
+          allergens: ["sulphites"],
+          vegan: true,
         },
       ],
     },
@@ -843,6 +983,8 @@ export const Alcohol = {
             tr: ["Sek Beyaz", "Yarı Tatlı Kırmızı", "Sek Kırmızı", "Roze"],
           },
           description: { el: "", en: "", tr: "" },
+          allergens: ["sulphites"],
+          vegan: true,
         },
         {
           title: { el: "ΡΕΤΣΙΝΑ", en: "RETSINA", tr: "RETSİNA" },
@@ -853,6 +995,8 @@ export const Alcohol = {
             tr: ["Malamatina", "Kourtaki"],
           },
           description: { el: "", en: "", tr: "" },
+          allergens: ["sulphites"],
+          vegan: true,
         },
       ],
     },
@@ -860,7 +1004,7 @@ export const Alcohol = {
       subTitle: {
         el: "ΑΠΟΣΤΑΓΜΑΤΑ",
         en: "GREEK SPIRITS",
-        tr: "YUNAN İÇKİLERΙ",
+        tr: "YUNAN İÇKİLERİ",
       },
       items: [
         {
@@ -872,10 +1016,11 @@ export const Alcohol = {
           price: 3.0,
           flavors: {
             el: ["50ml", "200ml (6.0€)"],
-            en: ["50ml", "200ml (8.0€)"],
-            tr: ["50ml", "200ml (8.0€)"],
+            en: ["50ml", "200ml (6.0€)"],
+            tr: ["50ml", "200ml (6.0€)"],
           },
           description: { el: "", en: "", tr: "" },
+          vegan: true,
         },
         {
           title: {
@@ -890,6 +1035,7 @@ export const Alcohol = {
             tr: ["200ml"],
           },
           description: { el: "", en: "", tr: "" },
+          vegan: true,
         },
       ],
     },
@@ -906,9 +1052,10 @@ export const Alcohol = {
           flavors: {
             el: ["Βότκα", "Τζιν", "Ρούμι", "Ουίσκι", "Τεκίλα"],
             en: ["Vodka", "Gin", "Rum", "Whiskey", "Tequila"],
-            tr: ["Votka", "Cin", "Romatiz", "Viski", "Tekila"],
+            tr: ["Votka", "Cin", "Rom", "Viski", "Tekila"],
           },
           description: { el: "", en: "", tr: "" },
+          vegan: true,
         },
         {
           title: {
@@ -923,6 +1070,7 @@ export const Alcohol = {
             tr: ["Campari", "Aperol", "Baileys"],
           },
           description: { el: "", en: "", tr: "" },
+          allergens: ["milk", "eggs", "sulphites"],
         },
       ],
     },
@@ -947,20 +1095,27 @@ export const Cocktails = {
             en: ["Classic", "Strawberry"],
             tr: ["Klasik", "Çilekli"],
           },
-          description: { el: "", en: "", tr: "" },
+          description: {
+            el: "Λευκό ρούμι, lime, φρέσκια μέντα, ζάχαρη, σόδα.",
+            en: "White rum, lime, fresh mint, sugar, soda.",
+            tr: "Beyaz rom, lime, taze nane, şeker, soda.",
+          },
           featured: true,
           photoUrl: "/assets/MOJITO.avif",
+          vegan: true,
         },
         {
           title: { el: "MAI TAI", en: "MAI TAI", tr: "MAI TAI" },
           price: 9.0,
           description: {
-            el: "Blend of rums, orgeat, lime, peach",
-            en: "Blend of rums, orgeat, lime, peach",
-            tr: "Romatiz, orgeat, lime",
+            el: "Μείγμα ρουμιών, orgeat (σιρόπι αμυγδάλου), lime, ροδάκινο.",
+            en: "Blend of rums, orgeat (almond syrup), lime, peach.",
+            tr: "Rom karışımı, orgeat (badem şurubu), lime, şeftali.",
           },
           featured: true,
           photoUrl: "/assets/MAI TAI.avif",
+          allergens: ["nuts"],
+          vegan: true,
         },
         {
           title: { el: "MARGARITA", en: "MARGARITA", tr: "MARGARITA" },
@@ -970,28 +1125,35 @@ export const Cocktails = {
             en: ["Classic", "Frozen Strawberry", "Frozen Watermelon"],
             tr: ["Klasik", "Frozen Çilek", "Frozen Karpuz"],
           },
-          description: { el: "", en: "", tr: "" },
+          description: {
+            el: "Tequila, triple sec, lime, αλάτι στο χείλος του ποτηριού.",
+            en: "Tequila, triple sec, lime, salt rim.",
+            tr: "Tekila, triple sec, lime, kenarda tuz.",
+          },
           photoUrl: "/assets/MARGARITA.avif",
+          vegan: true,
         },
         {
           title: { el: "PINA COLADA", en: "PINA COLADA", tr: "PINA COLADA" },
           price: 8.5,
           description: {
-            el: "Rum, coconut, pineapple juice",
-            en: "Rum, coconut, pineapple juice",
-            tr: "Romatiz, hindistan cevizi, ananas suyu",
+            el: "Λευκό ρούμι, κρέμα καρύδας, χυμός ανανά.",
+            en: "White rum, coconut cream, pineapple juice.",
+            tr: "Beyaz rom, hindistan cevizi kreması, ananas suyu.",
           },
           photoUrl: "/assets/PINA COLADA.avif",
+          vegan: true,
         },
         {
           title: { el: "PALOMA", en: "PALOMA", tr: "PALOMA" },
           price: 8.5,
           description: {
-            el: "Tequila, lime, pink grapefruit soda",
-            en: "Tequila, lime, pink grapefruit soda",
-            tr: "Tekila, lime, greyfurt soda",
+            el: "Tequila, lime, αναψυκτικό ροζ γκρέιπφρουτ.",
+            en: "Tequila, lime, pink grapefruit soda.",
+            tr: "Tekila, lime, pembe greyfurt sodası.",
           },
           photoUrl: "/assets/PALOMA.avif",
+          vegan: true,
         },
       ],
     },
@@ -1006,41 +1168,46 @@ export const Cocktails = {
           title: { el: "NEGRONI", en: "NEGRONI", tr: "NEGRONI" },
           price: 8.0,
           description: {
-            el: "Gin, Campari, Sweet Vermouth",
-            en: "Gin, Campari, Sweet Vermouth",
-            tr: "Cin, Campari, Vermut",
+            el: "Gin, Campari, γλυκό vermouth.",
+            en: "Gin, Campari, sweet vermouth.",
+            tr: "Cin, Campari, tatlı vermut.",
           },
           photoUrl: "/assets/NEGRONI.avif",
+          allergens: ["sulphites"],
+          vegan: true,
         },
         {
           title: { el: "DAIQUIRI", en: "DAIQUIRI", tr: "DAIQUIRI" },
           price: 8.0,
           description: {
-            el: "Rum, lime, simple syrup",
-            en: "Rum, lime, simple syrup",
-            tr: "Romatiz, lime, şurup",
+            el: "Λευκό ρούμι, lime, σιρόπι ζάχαρης.",
+            en: "White rum, lime, simple syrup.",
+            tr: "Beyaz rom, lime, şeker şurubu.",
           },
           photoUrl: "/assets/DAIQUIRI.avif",
+          vegan: true,
         },
         {
           title: { el: "COSMOPOLITAN", en: "COSMOPOLITAN", tr: "COSMOPOLITAN" },
           price: 8.0,
           description: {
-            el: "Vodka, triple sec, cranberry, lime",
-            en: "Vodka, triple sec, cranberry, lime",
-            tr: "Votka, triple sec, yaban mersini, lime",
+            el: "Vodka, triple sec, χυμός cranberry, lime.",
+            en: "Vodka, triple sec, cranberry juice, lime.",
+            tr: "Votka, triple sec, yaban mersini suyu, lime.",
           },
           photoUrl: "/assets/COSMOPOLITAN.avif",
+          vegan: true,
         },
         {
           title: { el: "CUBA LIBRE", en: "CUBA LIBRE", tr: "CUBA LIBRE" },
           price: 8.0,
           description: {
-            el: "Rum, cola, lime",
-            en: "Rum, cola, lime",
-            tr: "Romatiz, kola, lime",
+            el: "Λευκό ρούμι, cola, lime.",
+            en: "White rum, cola, lime.",
+            tr: "Beyaz rom, kola, lime.",
           },
           photoUrl: "/assets/CUBA LIBRE.avif",
+          vegan: true,
         },
         {
           title: {
@@ -1050,11 +1217,12 @@ export const Cocktails = {
           },
           price: 8.5,
           description: {
-            el: "Vodka, peach schnapps, orange, cranberry",
-            en: "Vodka, peach schnapps, orange, cranberry",
-            tr: "Votka, şeftali, portakal, yaban mersini",
+            el: "Vodka, peach schnapps, χυμός πορτοκαλιού, cranberry.",
+            en: "Vodka, peach schnapps, orange juice, cranberry.",
+            tr: "Votka, şeftali likörü, portakal suyu, yaban mersini.",
           },
           photoUrl: "/assets/SEX ON THE BEACH.avif",
+          vegan: true,
         },
       ],
     },
@@ -1062,38 +1230,41 @@ export const Cocktails = {
       subTitle: {
         el: "SOUR & MUDDLED",
         en: "SOUR & MUDDLED",
-        tr: "EKŞΙ VE EZΙLMİŞ",
+        tr: "EKŞİ VE EZİLMİŞ",
       },
       items: [
         {
           title: { el: "CAIPIRINHA", en: "CAIPIRINHA", tr: "CAIPIRINHA" },
           price: 8.0,
           description: {
-            el: "Cachaça, lime, sugar",
-            en: "Cachaça, lime, sugar",
-            tr: "Cachaça, lime, şeker",
+            el: "Cachaça, lime, ζάχαρη.",
+            en: "Cachaça, lime, sugar.",
+            tr: "Cachaça, lime, şeker.",
           },
           photoUrl: "/assets/CAIPIRINHA.avif",
+          vegan: true,
         },
         {
           title: { el: "CAIPIROSCA", en: "CAIPIROSCA", tr: "CAIPIROSCA" },
           price: 8.0,
           description: {
-            el: "Vodka, lime, sugar",
-            en: "Vodka, lime, sugar",
-            tr: "Votka, lime, şeker",
+            el: "Vodka, lime, ζάχαρη.",
+            en: "Vodka, lime, sugar.",
+            tr: "Votka, lime, şeker.",
           },
           photoUrl: "/assets/CAIPIROSCA.avif",
+          vegan: true,
         },
         {
           title: { el: "BRAMBLE", en: "BRAMBLE", tr: "BRAMBLE" },
           price: 8.5,
           description: {
-            el: "Gin, lemon, blackberry liqueur",
-            en: "Gin, lemon, blackberry liqueur",
-            tr: "Cin, limon, böğürtlen likörü",
+            el: "Gin, λεμόνι, σιρόπι, λικέρ βατόμουρου.",
+            en: "Gin, lemon, syrup, blackberry liqueur.",
+            tr: "Cin, limon, şurup, böğürtlen likörü.",
           },
           photoUrl: "/assets/BRAMBLE.avif",
+          vegan: true,
         },
       ],
     },
@@ -1108,11 +1279,13 @@ export const Cocktails = {
           title: { el: "MANHATTAN", en: "MANHATTAN", tr: "MANHATTAN" },
           price: 8.0,
           description: {
-            el: "Whiskey, sweet vermouth, bitters",
-            en: "Whiskey, sweet vermouth, bitters",
-            tr: "Viski, tatlı vermut",
+            el: "Whiskey, γλυκό vermouth, angostura bitters.",
+            en: "Whiskey, sweet vermouth, angostura bitters.",
+            tr: "Viski, tatlı vermut, angostura bitter.",
           },
           photoUrl: "/assets/MANHATTAN.avif",
+          allergens: ["sulphites"],
+          vegan: true,
         },
         {
           title: {
@@ -1122,11 +1295,12 @@ export const Cocktails = {
           },
           price: 8.0,
           description: {
-            el: "Whiskey, soda water, lemon",
-            en: "Whiskey, soda water, lemon",
-            tr: "Viski, soda, limon",
+            el: "Whiskey, σόδα, λεμόνι.",
+            en: "Whiskey, soda water, lemon.",
+            tr: "Viski, soda, limon.",
           },
           photoUrl: "/assets/WHISKEY HIGHBALL.avif",
+          vegan: true,
         },
       ],
     },
@@ -1145,11 +1319,13 @@ export const Cocktails = {
           },
           price: 8.5,
           description: {
-            el: "Aperol, prosecco, soda",
-            en: "Aperol, prosecco, soda",
-            tr: "Aperol, prosecco, soda",
+            el: "Aperol, prosecco, σόδα, φέτα πορτοκαλιού.",
+            en: "Aperol, prosecco, soda, orange slice.",
+            tr: "Aperol, prosecco, soda, portakal dilimi.",
           },
           photoUrl: "/assets/APEROL SPRITZ.avif",
+          allergens: ["sulphites"],
+          vegan: true,
         },
         {
           title: {
@@ -1159,11 +1335,13 @@ export const Cocktails = {
           },
           price: 8.5,
           description: {
-            el: "Campari, prosecco, soda",
-            en: "Campari, prosecco, soda",
-            tr: "Campari, prosecco, soda",
+            el: "Campari, prosecco, σόδα, φέτα πορτοκαλιού.",
+            en: "Campari, prosecco, soda, orange slice.",
+            tr: "Campari, prosecco, soda, portakal dilimi.",
           },
           photoUrl: "/assets/CAMPARI SPRITZ.avif",
+          allergens: ["sulphites"],
+          vegan: true,
         },
       ],
     },
@@ -1171,9 +1349,9 @@ export const Cocktails = {
 };
 export const foodMenu = {
   categoryTitle: {
-    el: "ΚΟΥΖΙΝΑ & ΦΑΓΗΤΟ",
-    en: "KITCHEN & FOOD",
-    tr: "MUTFAK VE YEMEK",
+    el: "ΦΑΓΗΤΑ",
+    en: "FOOD",
+    tr: "YEMEKLER",
   },
   subCategories: [
     {
@@ -1201,6 +1379,7 @@ export const foodMenu = {
             tr: "İçindekiler: domates, ketçap, hardal, mayonez",
           },
           photoUrl: "/assets/TOAST OR SANDWICH.avif",
+          allergens: ["gluten", "milk", "eggs", "mustard"],
         },
         {
           title: {
@@ -1215,6 +1394,8 @@ export const foodMenu = {
             tr: "Beyaz peynir, domates, salatalık, zeytin, kekik, zeytinyağı",
           },
           photoUrl: "/assets/GREEK VILLAGE SANDWICH.avif",
+          allergens: ["gluten", "milk"],
+          vegetarian: true,
         },
         {
           title: {
@@ -1229,6 +1410,7 @@ export const foodMenu = {
             tr: "Peynir, jambon, pastırma, marul, domates, mayonez. Taze patates kızartması ile servis edilir.",
           },
           photoUrl: "/assets/CLUB SANDWICH.avif",
+          allergens: ["gluten", "milk", "eggs", "mustard"],
         },
       ],
     },
@@ -1253,6 +1435,7 @@ export const foodMenu = {
           },
           featured: true,
           photoUrl: "/assets/CLASSIC BURGER.avif",
+          allergens: ["gluten", "milk", "eggs", "mustard"],
         },
         {
           title: {
@@ -1267,6 +1450,7 @@ export const foodMenu = {
             tr: "Ketçap, hardal",
           },
           photoUrl: "/assets/CLASSIC HOT DOG.avif",
+          allergens: ["gluten", "mustard"],
         },
         {
           title: {
@@ -1281,6 +1465,7 @@ export const foodMenu = {
             tr: "Cheddar, Barbekü sos, turşu, soğan",
           },
           photoUrl: "/assets/SPECIAL HOT DOG.avif",
+          allergens: ["gluten", "milk", "mustard"],
         },
       ],
     },
@@ -1300,6 +1485,7 @@ export const foodMenu = {
             tr: "Taze patates kızartması ile klasik tavuk nugget",
           },
           photoUrl: "/assets/CHICKEN NUGGETS PLATE.avif",
+          allergens: ["gluten", "eggs", "milk"],
         },
         {
           title: {
@@ -1314,6 +1500,7 @@ export const foodMenu = {
             tr: "Philadelphia peyniri dolgulu, taze patates kızartması ile",
           },
           photoUrl: "/assets/CHICKEN NUGGETS PHILADELPHIA.avif",
+          allergens: ["gluten", "eggs", "milk"],
         },
         {
           title: {
@@ -1328,6 +1515,7 @@ export const foodMenu = {
             tr: "Taze kesilmiş patates",
           },
           photoUrl: "/assets/FRENCH FRIES.avif",
+          vegan: true,
         },
       ],
     },
@@ -1343,6 +1531,8 @@ export const foodMenu = {
           price: 6,
           description: { el: "", en: "", tr: "" },
           photoUrl: "/assets/GREEK SALAD.avif",
+          allergens: ["milk"],
+          vegetarian: true,
         },
         {
           title: { el: "ΝΤΑΚΟΣ", en: "DAKOS SALAD", tr: "DAKOS" },
@@ -1353,18 +1543,23 @@ export const foodMenu = {
             tr: "Girit peksimeti, domates, beyaz peynir",
           },
           photoUrl: "/assets/DAKOS SALAD.avif",
+          allergens: ["gluten", "milk"],
+          vegetarian: true,
         },
         {
           title: { el: "CHEF SALAD", en: "CHEF SALAD", tr: "ŞEFİN SALATASI" },
           price: 6,
           description: { el: "", en: "", tr: "" },
           photoUrl: "/assets/CHEF SALAD.avif",
+          allergens: ["milk", "eggs"],
         },
         {
           title: { el: "ΤΖΑΤΖΙΚΙ", en: "TZATZIKI", tr: "CACIK" },
           price: 3,
           description: { el: "Χειροποίητο", en: "Handmade", tr: "El yapımı" },
           photoUrl: "/assets/TZATZIKI.avif",
+          allergens: ["milk"],
+          vegetarian: true,
         },
         {
           title: {
@@ -1379,6 +1574,7 @@ export const foodMenu = {
             tr: "Mevsim meyveleri ile",
           },
           photoUrl: "/assets/FRUIT SALAD.avif",
+          vegan: true,
         },
       ],
     },
@@ -1394,6 +1590,7 @@ export const foodMenu = {
           price: 2.2,
           description: { el: "Τεμάχιο", en: "Per piece", tr: "Adet" },
           photoUrl: "/assets/PORK SKEWER.avif",
+          allergens: ["mustard"],
         },
         {
           title: {
@@ -1403,18 +1600,21 @@ export const foodMenu = {
           },
           price: 2.5,
           description: { el: "Τεμάχιο", en: "Per piece", tr: "Adet" },
+          allergens: ["mustard"],
         },
         {
           title: { el: "ΜΠΙΦΤΕΚΙ", en: "BEEF PATTY", tr: "KÖFTE" },
           price: 2.5,
           description: { el: "Τεμάχιο", en: "Per piece", tr: "Adet" },
           photoUrl: "/assets/BEEF PATTY.avif",
+          allergens: ["gluten", "eggs"],
         },
         {
           title: { el: "ΚΕΜΠΑΠ", en: "KEBAB", tr: "KEBAP" },
           price: 2.5,
           description: { el: "Τεμάχιο", en: "Per piece", tr: "Adet" },
           photoUrl: "/assets/KEBAB.avif",
+          allergens: ["gluten", "eggs"],
         },
         {
           title: {
@@ -1425,12 +1625,15 @@ export const foodMenu = {
           price: 2.5,
           description: { el: "Τεμάχιο", en: "Per piece", tr: "Adet" },
           photoUrl: "/assets/TRADITIONAL SAUSAGE.avif",
+          allergens: ["mustard"],
         },
         {
-          title: { el: "ΠΙΤΑ", en: "PITA BREAD", tr: "PİTA EKMEĞΙ" },
+          title: { el: "ΠΙΤΑ", en: "PITA BREAD", tr: "PİTA EKMEĞİ" },
           price: 0.5,
           description: { el: "Τεμάχιο", en: "Per piece", tr: "Adet" },
           photoUrl: "/assets/PITA BREAD.avif",
+          allergens: ["gluten"],
+          vegan: true,
         },
       ],
     },
