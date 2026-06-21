@@ -232,7 +232,7 @@ export const Coffee = {
             en: "Regular (3.20€) | Quad (4.20€). Decaf available.",
             tr: "Normal (3.20€) | Quad (4.20€). Decaf mevcuttur.",
           },
-          price: 3.0,
+          price: 3.2,
           photoUrl: "/assets/FREDDO CAPPUCCINO.avif",
           allergens: ["milk"],
           vegetarian: true,
