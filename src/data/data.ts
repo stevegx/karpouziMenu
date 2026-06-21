@@ -228,9 +228,9 @@ export const Coffee = {
             tr: "FREDDO CAPPUCCINO",
           },
           description: {
-            el: "Κανονικό (3.00€) | Τετραπλό (4.00€). Decaf.",
-            en: "Regular (3.00€) | Quad (4.00€). Decaf available.",
-            tr: "Normal (3.00€) | Quad (4.00€). Decaf mevcuttur.",
+            el: "Κανονικό (3.20€) | Τετραπλό (4.20€). Decaf.",
+            en: "Regular (3.20€) | Quad (4.20€). Decaf available.",
+            tr: "Normal (3.20€) | Quad (4.20€). Decaf mevcuttur.",
           },
           price: 3.0,
           photoUrl: "/assets/FREDDO CAPPUCCINO.avif",
@@ -244,7 +244,7 @@ export const Coffee = {
             en: "Served plain. Decaf available. Milk on request.",
             tr: "Sade servis edilir. Decaf mevcuttur. İsteğe bağlı süt.",
           },
-          price: 2,
+          price: 2.5,
           photoUrl: "/assets/FRAPPE.avif",
           vegan: true,
         },
@@ -255,7 +255,7 @@ export const Coffee = {
             en: "With milk. Decaf available.",
             tr: "Sütlü. Decaf mevcuttur.",
           },
-          price: 3,
+          price: 3.2,
           photoUrl: "/assets/ICED LATTE.avif",
           allergens: ["milk"],
           vegetarian: true,
@@ -295,9 +295,9 @@ export const Coffee = {
         {
           title: { el: "CAPPUCCINO", en: "CAPPUCCINO", tr: "CAPPUCCINO" },
           description: {
-            el: "Μονό (2.20€) | Διπλό (3.00€). Decaf.",
-            en: "Single (2.20€) | Double (3.00€). Decaf available.",
-            tr: "Tek (2.20€) | Çift (3.00€). Decaf mevcuttur.",
+            el: "Μονό (2.50€) | Διπλό (3.20€). Decaf.",
+            en: "Single (2.50€) | Double (3.20€). Decaf available.",
+            tr: "Tek (2.50€) | Çift (3.20€). Decaf mevcuttur.",
           },
           price: 2.2,
           photoUrl: "/assets/cappuccino.avif",
@@ -311,7 +311,7 @@ export const Coffee = {
             tr: "YUNAN KAHVESİ",
           },
           description: {
-            el: "Μονός (1.50€) | Διπλός (2.00€). Decaf.",
+            el: "Μονός (1.50€) | Διπλός (2.50€). Decaf.",
             en: "Single (1.50€) | Double (2.00€). Decaf available.",
             tr: "Tek (1.50€) | Çift (2.00€). Decaf mevcuttur.",
           },
@@ -326,7 +326,7 @@ export const Coffee = {
             en: "Hot instant. Decaf available.",
             tr: "Sıcak hazır kahve. Decaf.",
           },
-          price: 2,
+          price: 2.5,
           photoUrl: "/assets/NESCAFE.avif",
           allergens: ["milk"],
           vegetarian: true,
@@ -426,7 +426,7 @@ export const Drinks = {
             en: "LIPTON ICE TEA (330ml / 500ml)",
             tr: "LIPTON ICE TEA (330ml / 500ml)",
           },
-          price: "2.00€ / 3.00€",
+          price: "2.00€ / 3.50€",
           flavors: {
             el: ["Λεμόνι", "Ροδάκινο", "Green", "Raspberry", "Χωρίς Ζάχαρη"],
             en: ["Lemon", "Peach", "Green", "Raspberry", "Zero Sugar"],
@@ -466,7 +466,7 @@ export const Drinks = {
             en: "Natural relaxing herbal drink.",
             tr: "Doğal rahatlatıcı bitki çayı.",
           },
-          price: 1.5,
+          price: 2,
           photoUrl: "/assets/CHAMOMILE.avif",
           vegan: true,
         },
@@ -875,7 +875,7 @@ export const Alcohol = {
             en: "PILSNER & PREMIUM",
             tr: "PILSNER & PREMIUM",
           },
-          price: 2,
+          price: 2.5,
           flavors: {
             el: ["Mamos", "Kaiser", "Άλφα Αλάτι"],
             en: ["Mamos", "Kaiser", "Alfa Salt"],
@@ -980,7 +980,7 @@ export const Alcohol = {
             en: "WINE (250ml / 500ml)",
             tr: "ŞARAP (250ml / 500ml)",
           },
-          price: "3.5€ / 6.0€",
+          price: "3.5€ / 7.0€",
           flavors: {
             el: ["Λευκό Ξηρό", "Ημιγλυκό Κόκκινο", "Κόκκινο Ξηρό", "Ροζέ"],
             en: ["Dry White", "Semi-sweet Red", "Dry Red", "Rosé"],
@@ -993,7 +993,7 @@ export const Alcohol = {
         },
         {
           title: { el: "ΡΕΤΣΙΝΑ", en: "RETSINA", tr: "RETSİNA" },
-          price: 6,
+          price: 7,
           flavors: {
             el: ["Μαλαματίνα", "Κουρτάκη"],
             en: ["Malamatina", "Kourtaki"],
@@ -1188,7 +1188,7 @@ export const Cocktails = {
         },
         {
           title: { el: "DAIQUIRI", en: "DAIQUIRI", tr: "DAIQUIRI" },
-          price: 8.0,
+          price: 8.5,
           description: {
             el: "Λευκό ρούμι, lime, σιρόπι ζάχαρης.",
             en: "White rum, lime, simple syrup.",
@@ -1199,7 +1199,7 @@ export const Cocktails = {
         },
         {
           title: { el: "COSMOPOLITAN", en: "COSMOPOLITAN", tr: "COSMOPOLITAN" },
-          price: 8.0,
+          price: 8.5,
           description: {
             el: "Vodka, triple sec, χυμός cranberry, lime.",
             en: "Vodka, triple sec, cranberry juice, lime.",
@@ -1245,7 +1245,7 @@ export const Cocktails = {
       items: [
         {
           title: { el: "CAIPIRINHA", en: "CAIPIRINHA", tr: "CAIPIRINHA" },
-          price: 8.0,
+          price: 8.5,
           description: {
             el: "Cachaça, lime, ζάχαρη.",
             en: "Cachaça, lime, sugar.",
@@ -1256,7 +1256,7 @@ export const Cocktails = {
         },
         {
           title: { el: "CAIPIROSCA", en: "CAIPIROSCA", tr: "CAIPIROSCA" },
-          price: 8.0,
+          price: 8.5,
           description: {
             el: "Vodka, lime, ζάχαρη.",
             en: "Vodka, lime, sugar.",
@@ -1287,7 +1287,7 @@ export const Cocktails = {
       items: [
         {
           title: { el: "MANHATTAN", en: "MANHATTAN", tr: "MANHATTAN" },
-          price: 8.0,
+          price: 8.5,
           description: {
             el: "Whiskey, γλυκό vermouth, angostura bitters.",
             en: "Whiskey, sweet vermouth, angostura bitters.",
@@ -1303,7 +1303,7 @@ export const Cocktails = {
             en: "WHISKEY HIGHBALL",
             tr: "WHISKEY HIGHBALL",
           },
-          price: 8.0,
+          price: 8.5,
           description: {
             el: "Whiskey, σόδα, λεμόνι.",
             en: "Whiskey, soda water, lemon.",
@@ -1439,9 +1439,25 @@ export const foodMenu = {
           },
           price: 6.5,
           description: {
-            el: "Μπιφτέκι, τυρί, μαρούλι, ντομάτα, κέτσαπ, μουστάρδα, πικλες, BBQ sauce. Συνοδεύεται από πατάτες.",
-            en: "Beef patty, cheese, lettuce, tomato, ketchup, mustard, pickles, BBQ sauce. Served with fries.",
-            tr: "Köfte, peynir, marul, domates, ketçap, hardal, turşu, Barbekü sos. Patates ile servis edilir.",
+            el: "Μπιφτέκι, τυρί, κέτσαπ, μουστάρδα, ντομάτα, μαρούλι. Συνοδεύεται από πατάτες.",
+            en: "Beef patty, cheese, ketchup, mustard, tomato, lettuce. Served with fries.",
+            tr: "Burger köftesi, peynir, ketçap, hardal, domates, marul. Patates ile servis edilir.",
+          },
+          featured: true,
+          photoUrl: "/assets/CLASSIC BURGER.avif",
+          allergens: ["gluten", "milk", "eggs", "mustard"],
+        },
+        {
+          title: {
+            el: "BURGER SPECIAL",
+            en: "SPECIAL BURGER",
+            tr: "SPESİYAL BURGER",
+          },
+          price: 8,
+          description: {
+            el: "Μπιφτέκι, τυρί Cheddar, BBQ sauce, πικλες, κρεμμύδι καραμελωμένο, μπέικον, μαρούλι. Συνοδεύεται από πατάτες.",
+            en: "Beef patty, Cheddar cheese, BBQ sauce, pickles, caramelized onion, bacon, lettuce. Served with fries.",
+            tr: "Burger köftesi, Cheddar peyniri, barbekü sos, turşu, karamelize soğan, bacon, marul. Patates ile servis edilir.",
           },
           featured: true,
           photoUrl: "/assets/CLASSIC BURGER.avif",
@@ -1470,7 +1486,7 @@ export const foodMenu = {
           },
           price: 4.5,
           description: {
-            el: "Cheddar, BBQ sauce, πίκλες, κρεμμύδι",
+            el: "Cheddar, BBQ sauce, πίκλες, κρεμμύδι καραμελωμένο",
             en: "Cheddar, BBQ sauce, pickles, onion",
             tr: "Cheddar, Barbekü sos, turşu, soğan",
           },
@@ -1597,7 +1613,7 @@ export const foodMenu = {
       items: [
         {
           title: { el: "ΣΟΥΒΛΑΚΙ ΧΟΙΡΙΝΟ", en: "PORK SKEWER", tr: "DOMUZ ŞİŞ" },
-          price: 2.2,
+          price: 2,
           description: { el: "Τεμάχιο", en: "Per piece", tr: "Adet" },
           photoUrl: "/assets/PORK SKEWER.avif",
           allergens: ["mustard"],
