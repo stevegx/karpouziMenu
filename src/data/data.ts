@@ -1580,6 +1580,23 @@ export const foodMenu = {
           allergens: ["milk", "eggs"],
         },
         {
+          title: {
+            el: "ΣΑΛΑΤΑ ΤΟΥ ΚΑΙΣΑΡΑ",
+            en: "CAESAR SALAD",
+            tr: "SEZAR SALATASI",
+          },
+          description: {
+            el: "Μαρούλι, κοτόπουλο, παρμεζάνα, αγγούρι, σως, κρουτόν",
+            en: "Lettuce, chicken, parmesan, cucumber, sauce, croutons",
+            tr: "Marul, tavuk, parmesan, salatalık, sos, kruton",
+          },
+          price: 6.5,
+          flavors: { el: [], en: [], tr: [] },
+          photoUrl: "/assets/CAESAR SALAD.avif",
+          allergens: ["gluten", "milk", "mustard", "eggs"], // Περιέχει κρουτόν (γλουτένη), παρμεζάνα/σως (γαλακτοκομικά, αυγό, μουστάρδα)
+        },
+
+        {
           title: { el: "ΤΖΑΤΖΙΚΙ", en: "TZATZIKI", tr: "CACIK" },
           price: 3,
           description: { el: "Χειροποίητο", en: "Handmade", tr: "El yapımı" },
