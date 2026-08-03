@@ -889,7 +889,7 @@ export const Alcohol = {
         },
         {
           title: { el: "ΝΗΣΟΣ", en: "NISOS", tr: "NISOS" },
-          price: 2.0,
+          price: 2.5,
           description: { el: "", en: "", tr: "" },
           photoUrl: "/assets/SPECIAL & LOCAL BREWS.avif",
           allergens: ["gluten"],
